@@ -86,14 +86,14 @@ class CfgSounds
    class IntroCiv
    {
     name="IntroCop";
-    sound[]={"\sounds\Intro.ogg",0.6,1};
+    sound[]={"\sounds\Intro.ogg",0.1,1};
     titles[] = {};
    };
 
    class IntroCop
    {
     name="IntroCiv";
-    sound[]={"\sounds\Intro.ogg",0.6,1};
+    sound[]={"\sounds\Intro.ogg",0.1,1};
     titles[] = {};
    };
 
