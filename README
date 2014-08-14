@@ -1,1 +1,9 @@
 MAFIAGAMING ALTIS LIFE
+
+- 	Se ha bajado el volumen de la intro a 1 porque vi que warblast la bajo a 3 y la gente me sigue diciendo que esta 
+	muy alta si esto no funciona avisar a Inix para que nos la pase con el volumen bajado.
+
+- 	El fallo que daba esta ultima versión de tonic con nuestras customizaciones por el cual los policias salen sin uniforme 
+	es porque el orden en el que se guardan y cargan ahora los objetos en la policia es distinto, antes iba el arma principal primero por ejemplo
+	y ahora es como en los civiles lo primero es el traje, por eso el array guardado en DB actualmente en la policia no tiene el orden correcto.
+	Sugiero solucionarlo borrandole a los policias en DB el equipo en el campo del cop_gear y que vuelvan a salir. 
