@@ -97,8 +97,8 @@ if (isnil "IL_Variables") then
 	IL_Para_Light_Veh = "Chemlight_blue";
 
 	//This allows for loading or unloading, if a player is in the area of loading or copilot
-	IL_Can_Inside = true;
-	IL_Can_CoPilot = true;
+	IL_Can_Inside = false;
+	IL_Can_CoPilot = false;
 	IL_Can_Outside = true;
 
 	//
