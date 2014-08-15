@@ -15,7 +15,7 @@ if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
 
 if(playerSide == civilian) then {
-	if(!([false,"lockpick",1] call life_fnc_handleInv)) exitWith {};
+	if(!([false,"esposas",1] call life_fnc_handleInv)) exitWith {};
 };
 //Broadcast!
 player say3D "cuff";
