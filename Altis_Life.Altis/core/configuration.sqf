@@ -252,7 +252,7 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000]
+	["goldbar",150000]
 ];
 __CONST__(sell_array,sell_array);
 
