@@ -1,5 +1,5 @@
 author = "Tonic";
-onLoadName = "Altis Life RPG v3.1.4";
+onLoadName = "Altis Life RPG v3.1.4.5";
 onLoadMission = "A RPG game mode developed by Tonic";
 loadScreen = "icons\loading_screen.jpg";
 joinUnassigned = 1;
@@ -120,9 +120,9 @@ class CfgDebriefing
 
 	class Blacklisted
 	{
-		title = "Mission Failed";
-		subtitle = "You are blacklisted from cops";
-		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		title = "Mision Fallida";
+		subtitle = "No estas en la whitelist para usar este slot";
+		description = "No puedes usar este slot porque no tienes los permisos apropiados, por favor prueba otro slot.";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
@@ -130,9 +130,9 @@ class CfgDebriefing
 
 	class SpyGlass
 	{
-		title = "The SpyGlass sees you";
-		subTitle = "You were detected by the SpyGlass";
-		description = "You were detected for cheating and have been reported to the server. Enjoy your day.";
+		title = "Te detecto el SpyGlass";
+		subTitle = "Fuistes detectado por SpyGlass";
+		description = "Fuistes detectado usando programas maliciosos. Disfruta del Sol ;D ";
 		pictureBackground = "";
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
