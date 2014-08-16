@@ -19,7 +19,7 @@ if (__GETC__(life_coplevel) == 3) then {
 	unitBackpack player setObjectTextureGlobal [0,""];
 };
 if (__GETC__(life_coplevel) == 4) then {
-	player setObjectTextureGlobal [0,"textures\piloto.jpg"];
+	player setObjectTextureGlobal [0,"textures\oficial.jpg"];
 	unitBackpack player setObjectTextureGlobal [0,""];
 };
 if (__GETC__(life_coplevel) == 5) then {
@@ -31,6 +31,6 @@ if (__GETC__(life_coplevel) == 6) then {
 	unitBackpack player setObjectTextureGlobal [0,""];
 };
 if (__GETC__(life_coplevel) == 7) then {
-	player setObjectTextureGlobal [0,"textures\oficial.jpg"];
+	player setObjectTextureGlobal [0,"textures\geo.jpg"];
 	unitBackpack player setObjectTextureGlobal [0,""];
 };
