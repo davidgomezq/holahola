@@ -26,7 +26,7 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
-__CONST__(life_donator,0);
+__CONST__(life_donator,parseNumber(_this select 5));
 
 //Loop through licenses
 if(count (_this select 6) > 0) then {
