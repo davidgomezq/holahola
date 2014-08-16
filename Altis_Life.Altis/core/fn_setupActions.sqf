@@ -17,6 +17,6 @@ switch (playerSide) do
 
 		//Kidnapping
 		life_actions = [player addAction["<t color='#00FF00'>Secuestrar</t>",life_fnc_restrainAction,cursorTarget,9999999,false,false,"",'
-        !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" or animationState cursorTarget == "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon" && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1 && !(player getVariable["restrained",false]) && life_inv_esposas > 0']];
+        !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" or animationState cursorTarget == "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon" && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1 && life_inv_esposas > 0']];
 	};
 };
