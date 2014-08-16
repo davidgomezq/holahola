@@ -221,7 +221,7 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-			["textures/strider.jpg","cop"]
+			["textures\strider.jpg","cop"]
 		];
 	};
 };
