@@ -216,6 +216,14 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
+	
+	case "I_MRAP_03_F":
+	{
+		_ret =
+		[
+			["textures/strider.jpg","cop"]
+		];
+	};
 };
 
 _ret;
