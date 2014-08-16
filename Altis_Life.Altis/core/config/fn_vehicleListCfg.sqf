@@ -84,22 +84,72 @@ switch (_shop) do
 		};
 	};
 
-	case "cop_car":
+    case "cop_car":
 	{
-		_return set[count _return,
-		["C_Offroad_01_F",5000]];
-		_return set[count _return,
-		["C_SUV_01_F",20000]];
-		_return set[count _return,
-		["C_Hatchback_01_sport_F",20000]];
-		_return set[count _return,
-		["C_Hatchback_01_F",2000]];
-		_return set[count _return,
-		["B_Quadbike_01_F",500]];
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) <= 2 ) then
 		{
 			_return set[count _return,
+			["B_Quadbike_01_F",30000]];
+			_return set[count _return,
+			["C_Hatchback_01_F",2000]];
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
+		};
+		
+		if(__GETC__(life_coplevel) = 3) then
+		{
+			_return set[count _return,
+			["B_Quadbike_01_F",30000]];
+			_return set[count _return,
+			["C_Hatchback_01_F",2000]];
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
+			_return set[count _return,
+			["C_Hatchback_01_sport_F",20000]];
+			_return set[count _return,
+			["C_SUV_01_F",20000]];
+		};
+		
+		if(__GETC__(life_coplevel) = 4) then
+		{
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
+			_return set[count _return,
+			["C_SUV_01_F",20000]];
+			_return set[count _return,
 			["B_MRAP_01_F",30000]];
+		};
+		
+		if(__GETC__(life_coplevel) = 5) then
+		{
+			_return set[count _return,
+			["B_Quadbike_01_F",30000]];
+			_return set[count _return,
+			["C_Hatchback_01_F",2000]];
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
+			_return set[count _return,
+			["C_Hatchback_01_sport_F",20000]];
+			_return set[count _return,
+			["C_SUV_01_F",20000]];
+		};
+		
+		if(__GETC__(life_coplevel) = 6) then
+		{
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
+			_return set[count _return,
+			["C_SUV_01_F",20000]];
+			_return set[count _return,
+			["B_MRAP_01_F",30000]];
+		};
+		
+		if(__GETC__(life_coplevel) = 7) then
+		{
+			_return set[count _return,
+			["I_MRAP_01_F",30000]];
+			_return set[count _return,
+			["C_Offroad_01_F",5000]];
 		};
 	};
 
