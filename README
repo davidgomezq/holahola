@@ -7,3 +7,5 @@ MAFIAGAMING ALTIS LIFE
 	es porque el orden en el que se guardan y cargan ahora los objetos en la policia es distinto, antes iba el arma principal primero por ejemplo
 	y ahora es como en los civiles lo primero es el traje, por eso el array guardado en DB actualmente en la policia no tiene el orden correcto.
 	Sugiero solucionarlo borrandole a los policias en DB el equipo en el campo del cop_gear y que vuelvan a salir. 
+	
+-   Añadido el sistema de smartphone
