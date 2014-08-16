@@ -232,6 +232,14 @@ switch (_vehicle) do
 			case 0: {_color = "Black"};
 		};
 	};
+	
+	case "I_MRAP_03_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Strider"};
+		};
+	};
 };
 
 _color;
