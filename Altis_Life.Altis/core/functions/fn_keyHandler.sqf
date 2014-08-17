@@ -50,6 +50,7 @@ switch (_code) do
 	case 1:
 	{
 		[] call SOCK_fnc_updateRequest;
+		sleep 240;
 	};
 	//Space key for Jumping
 	case 57:
