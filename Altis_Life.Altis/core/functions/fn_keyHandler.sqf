@@ -169,6 +169,11 @@ switch (_code) do
 		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
+	// Alt Sincronizado silencioso
+	case 56:
+	{
+	   [] call SOCK_fnc_updateRequest;
+	}
 	//Y Player Menu
 	case 21:
 	{
