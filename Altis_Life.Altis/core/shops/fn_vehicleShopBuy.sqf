@@ -88,7 +88,7 @@ _vehicle allowDamage true;
 
 life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 if(_mode) then {
-	if(!(_className in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","C_Hatchback_01_F","B_Heli_Light_01_F","B_Heli_Transport_01_F","I_Heli_light_03_unarmed_F","I_MRAP_03_hmg_F","I_MRAP_03_F","B_MRAP_01_hmg_F","B_MRAP_01_F"])) then {
+	if(!(_className in ["C_Offroad_01_F","B_MRAP_01_hmg_F"])) then {
 		[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 	};
 };
