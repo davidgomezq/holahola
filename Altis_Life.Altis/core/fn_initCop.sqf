@@ -36,9 +36,9 @@ switch (__GETC__(life_coplevel)) do
 				case 1: { life_paycheck = ((2000) + (_donatorlevel)); }; //Cadete
 				case 2: { life_paycheck = ((3000) + (_donatorlevel)); }; //Oficial
 				case 3: { life_paycheck = ((4000) + (_donatorlevel)); }; //CNP
-				case 4: { life_paycheck = ((5000) + (_donatorlevel)); }; //GC
+				case 4: { life_paycheck = ((4000) + (_donatorlevel)); }; //GC
 				case 5: { life_paycheck = ((6000) + (_donatorlevel)); }; //CNP Oficial
-				case 6: { life_paycheck = ((6500) + (_donatorlevel)); }; //GC Oficial
+				case 6: { life_paycheck = ((6000) + (_donatorlevel)); }; //GC Oficial
 				case 7: { life_paycheck = ((7000) + (_donatorlevel)); }; //Geo
 				default { life_paycheck = ((1500) + (_donatorlevel)); }; //Defecto
 			};
