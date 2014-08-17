@@ -169,11 +169,21 @@ switch (_code) do
 		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
+	
 	// Alt Sincronizado silencioso
 	case 56:
 	{
 	   [] call SOCK_fnc_updateRequest;
 	}
+	
+	  // E,Abridor de Latas
+        case 24:
+	{
+		if (!_shift && !_alt && !_ctrlKey && (playerSide == west) && (vehicle player != player)) then {
+			[] call life_fnc_copOpener;
+		};
+	};
+	
 	//Y Player Menu
 	case 21:
 	{
