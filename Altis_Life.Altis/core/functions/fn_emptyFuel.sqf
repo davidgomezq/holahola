@@ -18,28 +18,48 @@ while{true} do
         
         
         switch (typeOf (_vehicleToFuel)) do {
-            case "B_Quadbike_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_Hatchback_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_Offroad_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_SUV_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_Van_01_transport_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_Hatchback_01_sport_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
-            case "C_Van_01_box_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "I_Truck_02_transport_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "I_Truck_02_covered_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "B_Truck_01_transport_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "O_Truck_03_transport_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "O_Truck_03_covered_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "B_Truck_01_box_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "O_Truck_03_device_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "B_G_Offroad_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "O_MRAP_02_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "B_G_Offroad_01_armed_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "B_MRAP_01_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
-            case "I_MRAP_03_F":{_fuelConsumption = _velocityOfVehicle/100000+ 0.0001;};
-            case "B_MRAP_01_hmg_F":{_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_Quadbike_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_Hatchback_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_Offroad_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_SUV_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_Van_01_transport_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_Hatchback_01_sport_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;}; 
+            case "C_Van_01_box_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "I_Truck_02_transport_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "I_Truck_02_covered_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_Truck_01_transport_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "O_Truck_03_transport_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "O_Truck_03_covered_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_Truck_01_box_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "O_Truck_03_device_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_G_Offroad_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "O_MRAP_02_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_G_Offroad_01_armed_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "B_MRAP_01_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
+            case "I_MRAP_03_F":
+            {_fuelConsumption = _velocityOfVehicle/100000+ 0.0001;};
+            case "B_MRAP_01_hmg_F":
+            {_fuelConsumption = _velocityOfVehicle/10000 + 0.0001;};
             default {_fuelConsumption = _velocityOfVehicle/100000 + 0.0001;}
-        }
+        };
         
         if(_fuelConsumption > 0.002) then
         {
