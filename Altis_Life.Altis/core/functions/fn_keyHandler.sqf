@@ -175,6 +175,7 @@ switch (_code) do
 	case 56:
 	{
 	   [] call SOCK_fnc_updateRequest;
+	   sleep 240;
 	};
 	
 	  // E,Abridor de Latas
