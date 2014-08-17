@@ -297,6 +297,7 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copUniform {};
 		class copOpener {};
+		class copLoadout {};
 	};
 	
 	class Gangs
