@@ -41,57 +41,57 @@ switch (typeOf _vehicle) do
 	    _lightleft lightAttachObject [_vehicle, [-0.6, 2, -0.95]];
 	};
 	
-    case "C_Hatchback_01_sport_F":
+    case "C_Hatchback_01_sport_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.6, 2, -0.95]]; 
     };
     
-    case "C_Offroad_01_F":
+    case "C_Offroad_01_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
     };
     
-    case "C_SUV_01_F":
+    case "C_SUV_01_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.4, 2.3, -0.55]];
     };
     
-    case "B_Heli_Light_01_F":
+    case "B_Heli_Light_01_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
     };
     
-    case "B_Heli_Transport_01_F":
+    case "B_Heli_Transport_01_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.5, 0.0, 0.96]];
     };
     
-    case "I_Heli_light_03_unarmed_F":
+    case "I_Heli_light_03_unarmed_F": 
     {
     _lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
     };
     
-    case "I_MRAP_03_hmg_F":
+    case "I_MRAP_03_hmg_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
     };
     
-    case "I_MRAP_03_F":
+    case "I_MRAP_03_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-0.37, 0.0, 0.56]];
     };
     
-    case "B_APC_Wheeled_01_cannon_F":
+    case "B_APC_Wheeled_01_cannon_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-1, -2.8, 0.55]];
     };
     
-    case "B_MRAP_01_hmg_F":
+    case "B_MRAP_01_hmg_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-1, -2.8, 0.55]];
     };
     
-    case "B_MRAP_01_F":
+    case "B_MRAP_01_F": 
     {
         _lightleft lightAttachObject [_vehicle, [-1, -2.8, 0.55]];
     };
@@ -112,77 +112,77 @@ _lightright setLightAmbient [0.1,0.1,1];
 
 switch (typeOf _vehicle) do
 {
-	case "C_Offroad_01_F":
+	case "C_Offroad_01_F": 
 	{
 		_lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
 	};
 	
-	case "B_MRAP_01_F":
+	case "B_MRAP_01_F": 
 	{
 		_lightright lightAttachObject [_vehicle, [0.37, -1.9, 0.7]];
 	};
 	
-	case "C_SUV_01_F":
+	case "C_SUV_01_F": 
 	{
 		_lightright lightAttachObject [_vehicle, [0.37,-1.2,0.42]];
 	};
 	
-	case "C_Hatchback_01_F":
+	case "C_Hatchback_01_F": 
 	{
 	    _lightright lightAttachObject [_vehicle, [0.6, 2, -0.95]];
 	};
 	
-    case "C_Hatchback_01_sport_F":
+    case "C_Hatchback_01_sport_F": 
     {
         _lightright lightAttachObject [_vehicle, [0.6, 2, -0.95]];
     };
     
-    case "C_Offroad_01_F":
+    case "C_Offroad_01_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.37, 0.0, 0.56]];
     };
     
-    case "C_SUV_01_F":
+    case "C_SUV_01_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.4, 2.3, -0.52]];
     };
     
-    case "B_Heli_Light_01_F":
+    case "B_Heli_Light_01_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.37, 0.0, 0.56]];
     };
     
-    case "B_Heli_Transport_01_F":
+    case "B_Heli_Transport_01_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.5, 0.0, 0.96]];
     };
     
-    case "I_Heli_light_03_unarmed_F":
+    case "I_Heli_light_03_unarmed_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.37, 0.0, 0.56]];
     };
     
-    case "I_MRAP_03_hmg_F":
+    case "I_MRAP_03_hmg_F": 
     {
         _lightright lightAttachObject [_vehicle,  [0.37, 0.0, 0.56]];
     };
     
-    case "I_MRAP_03_F":
+    case "I_MRAP_03_F": 
     {
         _lightright lightAttachObject [_vehicle, [0.37, 0.0, 0.56]];
     };
     
-    case "B_APC_Wheeled_01_cannon_F":
+    case "B_APC_Wheeled_01_cannon_F": 
     {
         _lightright lightAttachObject [_vehicle, [1, -2.8, 0.55]];
     };
     
-    case "B_MRAP_01_hmg_F":
+    case "B_MRAP_01_hmg_F": 
     {
         _lightright lightAttachObject [_vehicle,  [1, -2.8, 0.55]];
     };
     
-    case "B_MRAP_01_F":
+    case "B_MRAP_01_F": 
     {   
         _lightright lightAttachObject [_vehicle, [1, -2.8, 0.55]];
     };
