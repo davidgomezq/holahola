@@ -147,7 +147,7 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) == 7) then
 		{
 			_return set[count _return,
-			["I_MRAP_01_F",30000]];
+			["I_MRAP_03_F",30000]];
 			_return set[count _return,
 			["C_Offroad_01_F",5000]];
 		};
