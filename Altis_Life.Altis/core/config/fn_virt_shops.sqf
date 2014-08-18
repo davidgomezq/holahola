@@ -25,4 +25,5 @@ switch (_shop) do
 	case "cop": {["Cop Item Shop",["donuts","coffee","spikeStrip","water","rabbit","apple","redgull","fuelF","defusekit"]]};
 	case "cement": {["Cement Dealer",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
+	case "tesoros": {["Comerciante de Tesoros",["pergamino","vasija","doblon","brazalete","catalejo","abrecartas","collar","cetro"]]};
 };
