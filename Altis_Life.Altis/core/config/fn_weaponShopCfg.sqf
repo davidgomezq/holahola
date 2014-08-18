@@ -190,6 +190,13 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75]
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["NVGoggles",nil,2000],
+						["Chemlight_red",nil,300],
+						["Chemlight_yellow",nil,30],
+						["Chemlight_green",nil,30],
+						["Chemlight_blue",nil,30]
 					]
 				];
 			};
@@ -206,9 +213,9 @@ switch(_shop) do
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
 				["Chemlight_red",nil,300],
-				["Chemlight_yellow",nil,300],
-				["Chemlight_green",nil,300],
-				["Chemlight_blue",nil,300]
+				["Chemlight_yellow",nil,15],
+				["Chemlight_green",nil,15],
+				["Chemlight_blue",nil,15]
 			]
 		];
 	};
