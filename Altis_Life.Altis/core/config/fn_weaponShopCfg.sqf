@@ -151,6 +151,13 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil,3000],
 						["10Rnd_762x51_Mag",nil,5000],
 						["30Rnd_65x39_caseless_green",nil,2750]
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["NVGoggles",nil,2000],
+						["Chemlight_red",nil,50],
+						["Chemlight_yellow",nil,50],
+						["Chemlight_green",nil,50],
+						["Chemlight_blue",nil,50]
 					]
 				];
 			};
@@ -177,6 +184,9 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75]
+						["hgun_Pistol_Signal_F",Pistola de vengalas,7500],
+						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
+						["6Rnd_RedSignal_F",6 vengalas rojas,25]
 					]
 				];
 			};
@@ -202,13 +212,16 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75]
+						["hgun_Pistol_Signal_F",Pistola de vengalas,15000],
+						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
+						["6Rnd_RedSignal_F",6 vengalas rojas,25],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,30],
-						["Chemlight_yellow",nil,30],
-						["Chemlight_green",nil,30],
-						["Chemlight_blue",nil,30]
+						["Chemlight_red",nil,50],
+						["Chemlight_yellow",nil,50],
+						["Chemlight_green",nil,50],
+						["Chemlight_blue",nil,50]
 					]
 				];
 			};
@@ -224,10 +237,10 @@ switch(_shop) do
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
-				["Chemlight_red",nil,15],
-				["Chemlight_yellow",nil,15],
-				["Chemlight_green",nil,15],
-				["Chemlight_blue",nil,15]
+				["Chemlight_red",nil,50],
+				["Chemlight_yellow",nil,50],
+				["Chemlight_green",nil,50],
+				["Chemlight_blue",nil,50]
 			]
 		];
 	};
