@@ -29,8 +29,8 @@ switch(_shop) do
 			{
 				["Altis Cop Shop",
 					[
-						["hgun_P07_snds_F","Stun Pistol",2000],
-						["HandGrenade_Stone","Flashbang",1700],
+						["hgun_P07_snds_F","Taser",2000],
+						["HandGrenade_Stone","Flash",1700],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,250],
@@ -77,14 +77,20 @@ switch(_shop) do
 					[
 						["arifle_MX_F",nil,35000],
 						["SMG_02_ACO_F",nil,3000],
-						["HandGrenade_Stone","Flashbang",1700],
+						["HandGrenade_Stone","Flash",1700],
 						["MineDetector",nil,1000],
 						["acc_flashlight",nil,750],
 						["optic_Holosight",nil,1200],
 						["optic_Arco",nil,2500],
 						["muzzle_snds_H",nil,2750],
 						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
+						["30Rnd_9x21_Mag",nil,250],
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["Medikit",nil,1000],
+						["NVGoggles",nil,2000]
 					]
 				];
 			};
@@ -109,7 +115,13 @@ switch(_shop) do
 						["muzzle_snds_H",nil,2750],
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["30Rnd_9x21_Mag",nil,60],
-						["9Rnd_45ACP_Mag",nil,200]
+						["9Rnd_45ACP_Mag",nil,200],
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["Medikit",nil,1000],
+						["NVGoggles",nil,2000]						
 					]
 				];
 			};
@@ -193,10 +205,10 @@ switch(_shop) do
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
-						["Chemlight_red",nil,50],
-						["Chemlight_yellow",nil,50],
-						["Chemlight_green",nil,50],
-						["Chemlight_blue",nil,50]
+						["Chemlight_red",nil,30],
+						["Chemlight_yellow",nil,30],
+						["Chemlight_green",nil,30],
+						["Chemlight_blue",nil,30]
 					]
 				];
 			};
@@ -212,10 +224,10 @@ switch(_shop) do
 				["ToolKit",nil,250],
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
-				["Chemlight_red",nil,50],
-				["Chemlight_yellow",nil,50],
-				["Chemlight_green",nil,50],
-				["Chemlight_blue",nil,50]
+				["Chemlight_red",nil,15],
+				["Chemlight_yellow",nil,15],
+				["Chemlight_green",nil,15],
+				["Chemlight_blue",nil,15]
 			]
 		];
 	};
