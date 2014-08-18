@@ -12344,7 +12344,7 @@ class Mission
 		};
 		class Item176
 		{
-			position[]={15596.775,18.531496,17184.191};
+			position[]={15596.775,19.1,17184.191};
 			name="medic_spawn_2";
 			type="Empty";
 			angle=-39.342587;
