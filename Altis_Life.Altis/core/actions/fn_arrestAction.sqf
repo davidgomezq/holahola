@@ -6,6 +6,8 @@
 */
 private["_unit","_id"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_time = [_this,1,15] call BIS_fnc_param; //Default jail time 15 <-- Add This Line!
+
 if(isNull _unit) exitWith {}; //Not valid
 if(isNil "_unit") exitwith {}; //Not Valid
 if(!(_unit isKindOf "Man")) exitWith {}; //Not a unit
