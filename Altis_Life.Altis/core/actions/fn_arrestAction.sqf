@@ -4,7 +4,7 @@
 	Description:
 	Arrests the targeted person.
 */
-private["_unit","_id"];
+private["_unit","_id","_time"];
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _time = [_this,1,15] call BIS_fnc_param; //Default jail time 15 <-- Add This Line!
 
