@@ -300,6 +300,8 @@ class Life_Client_Core
 		class copUniform {};
 		class copOpener {};
 		class copLoadout {};
+		class showArrestDialog {};
+		class arrestDialog_Arrest {}; 
 	};
 	
 	class Gangs
