@@ -17,7 +17,9 @@ if(_bad) then //Load time from database
 	diag_log "**TIMEJAIL** Loading jail time from DB";
 
 	_query = format["SELECT jail_time FROM players WHERE playerid='%2'", _time, getPlayerUID _unit];
-	_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
+	waitUntil{!DB_Async_Active};
+	_result = [_query,2] call DB_fnc_asyncCall;
+	//_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
 	
 	_result = call compile format["%1", _result];
 	_result = parseNumber (((_result select 0) select 0) select 0);
@@ -30,7 +32,9 @@ else //Set time to database
 {
 	diag_log "**TIMEJAIL** Sending to DB";
 	_query = format["UPDATE players SET jail_time='%1' WHERE playerid='%2'", _time, getPlayerUID _unit];
-	_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
+	waitUntil{!DB_Async_Active};
+	_result = [_query,1] call DB_fnc_asyncCall;
+	//_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
 };
 
 diag_log format["**TIMEJAIL** Jail time for player %1 is %2",name _unit , _time];

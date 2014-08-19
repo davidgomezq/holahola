@@ -18,7 +18,9 @@ _player = owner _player;
 
 ////I
 _query = format["UPDATE players SET jail_time='%1' WHERE playerid='%2'", _time, _playeruid];
-_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
+waitUntil{!DB_Async_Active};
+_result = [_query,1] call DB_fnc_asyncCall;
+//_result = "Arma2Net.Unmanaged" callExtension format ["Arma2NETMySQLCommand ['%2', '%1']", _query,(call LIFE_SCHEMA_NAME)];
 
 
 //SEND TO MISSION
