@@ -183,7 +183,7 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,75],
 						["hgun_Pistol_Signal_F",Pistola de vengalas,7500],
 						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
 						["6Rnd_RedSignal_F",6 vengalas rojas,25]
@@ -211,7 +211,7 @@ switch(_shop) do
 						["16Rnd_9x21_Mag",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["30Rnd_9x21_Mag",nil,75],
 						["hgun_Pistol_Signal_F",Pistola de vengalas,15000],
 						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
 						["6Rnd_RedSignal_F",6 vengalas rojas,25],
