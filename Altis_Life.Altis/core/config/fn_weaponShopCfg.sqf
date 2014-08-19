@@ -150,7 +150,7 @@ switch(_shop) do
 						["20Rnd_556x45_UW_mag",nil,1250],
 						["30Rnd_556x45_Stanag",nil,3000],
 						["10Rnd_762x51_Mag",nil,5000],
-						["30Rnd_65x39_caseless_green",nil,2750]
+						["30Rnd_65x39_caseless_green",nil,2750],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
