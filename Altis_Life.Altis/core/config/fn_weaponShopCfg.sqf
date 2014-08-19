@@ -184,9 +184,9 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75],
-						["hgun_Pistol_Signal_F",Pistola de vengalas,7500],
-						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
-						["6Rnd_RedSignal_F",6 vengalas rojas,25]
+						["hgun_Pistol_Signal_F","Pistola de vengalas",7500],
+						["6Rnd_GreenSignal_F","Bengalas verdes",25],
+						["6Rnd_RedSignal_F","Bengalas rojas",25]
 					]
 				];
 			};
@@ -212,9 +212,9 @@ switch(_shop) do
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75],
-						["hgun_Pistol_Signal_F",Pistola de vengalas,15000],
-						["6Rnd_GreenSignal_F",6 vengalas verdes,25],
-						["6Rnd_RedSignal_F",6 vengalas rojas,25],
+						["hgun_Pistol_Signal_F","Pistola de vengalas",15000],
+						["6Rnd_GreenSignal_F","Bengalas verdes,25],
+						["6Rnd_RedSignal_F","Bengalas rojas",25],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["NVGoggles",nil,2000],
