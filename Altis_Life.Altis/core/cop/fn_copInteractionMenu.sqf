@@ -86,7 +86,7 @@ if((_curTarget getVariable["Escorting",false])) then {
 _Btn5 ctrlSetText localize "STR_pInAct_TicketBtn";
 _Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
 
-_Btn6 ctrlSetTooltip localize "STR_pInAct_Arrest"; <-- Replace Old Line With This
+_Btn6 ctrlSetTooltip localize "STR_pInAct_Arrest";
 _Btn6 buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_fnc_arrestAction;"; 
 
 _Btn6 buttonSetAction "closeDialog 0; [] call life_fnc_showArrestDialog;";
