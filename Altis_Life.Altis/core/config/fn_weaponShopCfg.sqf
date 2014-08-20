@@ -213,7 +213,7 @@ switch(_shop) do
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75],
 						["hgun_Pistol_Signal_F","Pistola de bengalas",15000],
-						["6Rnd_GreenSignal_F","Bengalas verdes,25],
+						["6Rnd_GreenSignal_F","Bengalas verdes",25],
 						["6Rnd_RedSignal_F","Bengalas rojas",25],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
