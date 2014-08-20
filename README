@@ -1,4 +1,7 @@
 ﻿MAFIAGAMING ALTIS LIFE
+﻿
+﻿POR FAVOR COMPAÑEROS, CUANDO HAGAIS UN COMMIT QUE SOLUCIONE UN ISSUE PONERLO EN EL COMENTARIO DEL COMMIT PARA QUE SE RELACIONE POR EJEMPLO: 
+﻿"Issue #25 bla bla bla comentario del commit"
 
 -   Se ejecuta consulta para vaciar inventario de la policia y reabro el servidor con la contraseña Alpha. Consulto a los jugadores y de momento todo funciona.
 
