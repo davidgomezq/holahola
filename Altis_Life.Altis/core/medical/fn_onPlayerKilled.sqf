@@ -96,6 +96,7 @@ life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
 life_cash = 0;
+life_is_alive = false;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
