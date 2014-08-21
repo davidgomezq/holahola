@@ -43,7 +43,7 @@ switch (_item) do
 	case "salt": {3};
 	case "salt_r": {1};
 	case "glass": {1};
-	case "diamond": {4};
+	case "diamond": {5};
 	case "diamondc": {2};
 	case "cocaine": {6};
 	case "cocainep": {4};
