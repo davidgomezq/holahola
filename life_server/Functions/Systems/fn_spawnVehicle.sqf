@@ -103,7 +103,7 @@ if((_vInfo select 1) == "civ" && (_vInfo select 2) == "B_Heli_Light_01_F" && _vI
 	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
 
-if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["C_Offroad_01_F","I_MRAP_03_hmg_F","B_MRAP_01_hmg_F"]) then
+if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["I_MRAP_03_hmg_F","B_MRAP_01_hmg_F"]) then
 {
 	[[_vehicle,"cop_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
 };
