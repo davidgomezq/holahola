@@ -3,6 +3,8 @@
 	Author: Tonic
 */
 private["_packet","_array","_flag","_civPosition"];
+_civPosition = getPos player;
+diag_log format ["%1",_civPosition];
 _packet = [getPlayerUID player,(profileName),playerSide,life_cash,life_atmcash];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
