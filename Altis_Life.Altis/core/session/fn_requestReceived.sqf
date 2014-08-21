@@ -60,8 +60,8 @@ switch(playerSide) do {
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
 		};
-		civ_position = _this select 10;
-        life_is_alive = _this select 11;
+		civ_position = _this select 11;
+        life_is_alive = _this select 12;
 		[] spawn life_fnc_initHouses;
 	};
 	
