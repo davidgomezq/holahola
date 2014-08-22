@@ -78,10 +78,6 @@ switch (_side) do {
 	case civilian: {
 		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
 
-		_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
- 		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
- 		_queryResult set[8,_new];
-
         //Pos
 		_new = [(_queryResult select 9)] call DB_fnc_mresToArray;
         if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
@@ -98,7 +94,6 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[10,(missionNamespace getVariable[format["gang_%1",_uid],[]])];
- 		missionNamespace setVariable[format["gang_%1",_uid],nil];
 
 	};
 };
