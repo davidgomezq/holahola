@@ -56,13 +56,13 @@ switch (_shop) do
 		_return =
 		[
 			["C_Van_01_box_F",60000],
-			["I_Truck_02_transport_F",100000],
-			["I_Truck_02_covered_F",200000],
-			["B_Truck_01_transport_F",400000],
-			["O_Truck_03_transport_F",500000],
-			["O_Truck_03_covered_F",600000],
-			["B_Truck_01_box_F",700000],
-			["O_Truck_03_device_F",2000000]
+			["I_Truck_02_transport_F",120000],
+			["I_Truck_02_covered_F",240000],
+			["B_Truck_01_transport_F",480000],
+			["O_Truck_03_transport_F",960000],
+			["O_Truck_03_covered_F",1920000],
+			["B_Truck_01_box_F",3840000],
+			["O_Truck_03_device_F",6000000]
 		];
 	};
 
@@ -95,7 +95,7 @@ switch (_shop) do
 			_return set[count _return,
 			["C_Offroad_01_F",5000]];
 		};
-		
+
 		if(__GETC__(life_coplevel) == 3) then
 		{
 			_return set[count _return,
@@ -109,7 +109,7 @@ switch (_shop) do
 			_return set[count _return,
 			["C_SUV_01_F",20000]];
 		};
-		
+
 		if(__GETC__(life_coplevel) == 4) then
 		{
 			_return set[count _return,
@@ -119,7 +119,7 @@ switch (_shop) do
 			_return set[count _return,
 			["B_MRAP_01_F",30000]];
 		};
-		
+
 		if(__GETC__(life_coplevel) == 5) then
 		{
 			_return set[count _return,
@@ -133,7 +133,7 @@ switch (_shop) do
 			_return set[count _return,
 			["C_SUV_01_F",20000]];
 		};
-		
+
 		if(__GETC__(life_coplevel) == 6) then
 		{
 			_return set[count _return,
@@ -143,7 +143,7 @@ switch (_shop) do
 			_return set[count _return,
 			["B_MRAP_01_F",30000]];
 		};
-		
+
 		if(__GETC__(life_coplevel) == 7) then
 		{
 			_return set[count _return,
