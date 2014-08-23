@@ -122,7 +122,7 @@ if (_buyprice != 0) then {if( (_buyprice - (_varprice * _amount)) > _minprice ) 
 if ((_sellprice - (_varprice * _amount)) > _minprice) then {_sellprice = _sellprice - (_varprice * _amount);}else {_allOk = false;};
 };
 };
-_query =format["UPDATE economy SET buyprice='%1', sellprice='%2' WHERE ressource='%3'",_buyprice,_sellprice,_ressource];
+_query =format["UPDATE economy SET buyprice=%1, sellprice=%2 WHERE ressource='%3'",_buyprice,_sellprice,_ressource];
 _queryArray set [count _queryArray,_query];
 
 
