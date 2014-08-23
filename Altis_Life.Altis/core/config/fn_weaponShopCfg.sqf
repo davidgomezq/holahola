@@ -75,7 +75,7 @@ switch(_shop) do
 			{
 				["Altis Patrol Officer Shop",
 					[
-						["arifle_MX_F",nil,35000],
+						["arifle_MX_F",nil,75000],
 						["SMG_02_ACO_F",nil,3000],
 						["HandGrenade_Stone","Flash",1700],
 						["MineDetector",nil,1000],
@@ -102,11 +102,12 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not at a sergeant rank!"};
+			case (__GETC__(life_coplevel) < 5): {"You are not at a sergeant rank!"};
 			default
 			{
 				["Altis Sergeant Officer Shop",
 					[
+					    ["srifle_EBR_F",nil,95000],
 						["SMG_02_ACO_F",nil,3000],
 						["hgun_ACPC2_F",nil,17500],
 						["HandGrenade_Stone","Flashbang",1700],
@@ -116,6 +117,8 @@ switch(_shop) do
 						["30Rnd_65x39_caseless_mag",nil,100],
 						["30Rnd_9x21_Mag",nil,60],
 						["9Rnd_45ACP_Mag",nil,200],
+						["20Rnd_762x51_Mag",nil,500],
+						["30Rnd_65x39_caseless_mag_Tracer","Taser",150],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,250],
@@ -141,13 +144,11 @@ switch(_shop) do
 						["arifle_TRG20_F",nil,125000],
 						["arifle_Katiba_F",nil,250000],
 						["srifle_DMR_01_F",nil,380000],
-						["arifle_SDAR_F",nil,120000],
 						["optic_ACO_grn",nil,35000],
 						["optic_Holosight",nil,36000],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,75000],
 						["30Rnd_9x21_Mag",nil,2000],
-						["20Rnd_556x45_UW_mag",nil,1250],
 						["30Rnd_556x45_Stanag",nil,3000],
 						["10Rnd_762x51_Mag",nil,5000],
 						["30Rnd_65x39_caseless_green",nil,2750],
@@ -206,12 +207,14 @@ switch(_shop) do
 						["hgun_Pistol_heavy_02_F",nil,2500],
 						["hgun_ACPC2_F",nil,4500],
 						["hgun_PDW2000_F",nil,9500],
+						["arifle_SDAR_F",nil,95000],
 						["optic_ACO_grn_smg",nil,950],
 						["V_Rangemaster_belt",nil,1900],
 						["16Rnd_9x21_Mag",nil,25],
 						["9Rnd_45ACP_Mag",nil,45],
 						["6Rnd_45ACP_Cylinder",nil,50],
 						["30Rnd_9x21_Mag",nil,75],
+						["20Rnd_556x45_UW_mag",nil,1250],
 						["hgun_Pistol_Signal_F","Pistola de bengalas",15000],
 						["6Rnd_GreenSignal_F","Bengalas verdes",25],
 						["6Rnd_RedSignal_F","Bengalas rojas",25],
