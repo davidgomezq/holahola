@@ -105,6 +105,8 @@ class CfgFunctions
 			class chopShopSell {};
 			class clientDisconnect {};
 			class cleanupRequest {};
+			class getPrices {};
+            class ajustprices {};
 		};
 		
 		class Housing
