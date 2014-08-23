@@ -1,7 +1,7 @@
 /*
 	File: fn_getPrices.sqf
 	Author: Worldtrade1101
-	
+
 	Description:
 	Send a query to retrieve the price of stuff on the server
 */
@@ -26,11 +26,11 @@ diag_log "data ou type ou unit null";
 
 _unit = owner _unit;
 
-	
+
 	_query = switch (_data) do {
-	
-	
-	
+
+
+
 		case "market" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 		case "heroin" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 		case "rebel" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' OR shoptype='market' ",_data];};

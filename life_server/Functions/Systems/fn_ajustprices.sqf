@@ -58,10 +58,10 @@ diag_log format["Result: %1",_queryResult];
 diag_log "------------------------------------------------";
 
 
-if (((_queryResult select 0) select 0) == "0") exitwith {};//the factor 0 is not a real group
+if (((_queryResult select 0) select 0) == 0) exitwith {};//the factor 0 is not a real group
 
 
-_group = parseNumber((_queryResult select 0) select 0);
+_group = ((_queryResult select 0) select 0);
 
 
 _query = format["SELECT ressource, buyprice, sellprice, varprice, minprice, maxprice FROM economy WHERE factor='%1'",_group];
