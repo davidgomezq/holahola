@@ -9,6 +9,7 @@ class Socket_Reciever
 		class insertPlayerInfo {};
 		class updateRequest {};
 		class syncData {};
+		class updatePartial {};
 	};
 };
 
@@ -305,6 +306,7 @@ class Life_Client_Core
 		class arrestDialog_Arrest {}; 
 		class seizePlayerWeapon {};
 	    class seizePlayerWeaponAction {};
+		class ticketPaid {};
 	};
 	
 	class Gangs

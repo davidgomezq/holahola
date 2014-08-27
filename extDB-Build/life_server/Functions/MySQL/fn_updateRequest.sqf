@@ -41,7 +41,7 @@ switch (_side) do {
 		_alive = [_this select 9] call DB_fnc_bool;
 		_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_gear='%4', civ_licenses='%5', arrested='%7', civPosition='%8', alive='%9' WHERE playerid='%6'", _name, _cash, _bank, _gear, _licenses, _uid, _arrested, _civPosition, _alive];
  	};
-	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid];};
+	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%6' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear];};
 };
 
 waitUntil {sleep (random 0.3); !DB_Async_Active};

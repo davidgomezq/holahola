@@ -14,3 +14,5 @@ life_versionInfo = "Altis Life RPG v3.1.4.5";
 //[] execVM "IgiLoad\IgiLoadInit.sqf";
 
 StartProgress = true;
+
+"BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};
