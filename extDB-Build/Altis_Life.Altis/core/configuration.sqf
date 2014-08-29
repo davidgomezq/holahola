@@ -109,7 +109,7 @@ switch (playerSide) do
 	};
 	case civilian:
 	{
-		life_atmcash = 5000; //Starting Bank Money
+		life_atmcash = 9250; //Starting Bank Money
 		life_paycheck = 500; //Paycheck Amount
 	};
 
@@ -349,10 +349,10 @@ life_garage_prices =
 	["I_Truck_02_transport_F",30000],
 	["I_Truck_02_covered_F",60000],
 	["B_Truck_01_transport_F",100000],
-	["O_Truck_03_transport_F",200000],
-	["O_Truck_03_covered_F",260000],
-	["O_Truck_03_device_F",450000],
-	["B_Truck_01_box_F", 320000],
+	["O_Truck_03_transport_F",100000],
+	["O_Truck_03_covered_F",150000],
+	["O_Truck_03_device_F",300000],
+	["B_Truck_01_box_F", 200000],
 	["O_MRAP_02_F",325000],
 	["B_Heli_Light_01_F",125000],
 	["O_Heli_Light_02_unarmed_F",65000],
