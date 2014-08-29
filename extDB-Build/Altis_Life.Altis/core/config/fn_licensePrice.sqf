@@ -17,14 +17,14 @@ switch (_type) do
 	case "gun": {20000}; //Firearm/gun license cost
 	case "dive": {15000}; //Diving license cost
 	case "oil": {20000}; //Oil processing license cost
-	case "cair": {15000}; //Cop Pilot License cost
-	case "swat": {35000}; //Swat License cost
+	case "cair": {60000}; //Cop Pilot License cost
+	case "swat": {90000}; //Swat License cost
 	case "cg": {8000}; //Coast guard license cost
 	case "heroin": {40000}; //Heroin processing license cost
 	case "marijuana": {25000}; //Marijuana processing license cost
 	case "medmarijuana": {1500}; //Medical Marijuana processing license cost
 	case "gang": {150000}; //Gang license cost
-	case "rebel": {500000}; //Rebel license cost
+	case "rebel": {250000}; //Rebel license cost
 	case "truck": {40000}; //Truck license cost
 	case "diamond": {35000};
 	case "salt": {15000};
