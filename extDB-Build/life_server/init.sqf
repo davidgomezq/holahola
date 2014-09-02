@@ -35,14 +35,6 @@ if(isNil {uiNamespace getVariable "life_sql_id"}) then {
 	__CONST__(life_sql_id,life_sql_id);
 };
 
-_version = "extDB" callExtension "9:VERSION";
-if(_version == "") exitWith {life_server_extDB_notLoaded = true; publicVariable "life_server_extDB_notLoaded";};
-
-//Initialize the database
-"extDB" callExtension "9:DATABASE:Database2";
-"extDB" callExtension format["9:ADD:DB_RAW:%1",(call life_sql_id)];
-"extDB" callExtension "9:LOCK";
-
 //Run procedures for SQL cleanup on mission start.
 ["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;
 ["CALL deleteDeadVehicles",1] spawn DB_fnc_asyncCall;
