@@ -13,5 +13,6 @@ if(isNull _player) exitWith {};
 
 _query = format["DELETE FROM messages WHERE toID='%1'",getPlayerUID _player];
 
+if(_query == "") exitWith {};
 waitUntil{!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
