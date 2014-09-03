@@ -33,19 +33,17 @@ class FSM
     class Initialize
     {
       name = "Initialize";
-      init = /*%FSM<STATEINIT""">*/"private["_skipDay"",""_skipNight"",""_method"",""_fastNight"",""_sunState""];" \n
+      init = /*%FSM<STATEINIT""">*/"private[""_skipDay"",""_skipNight"",""_method"",""_fastNight"",""_sunState""];" \n
        "" \n
        "_skipDay = [_this,0,8,[0]] call BIS_fnc_param;" \n
        "_method = [_this,1,true,[false]] call BIS_fnc_param;" \n
        "_fastNight = [_this,2,false,[true]] call BIS_fnc_param;" \n
        "_skipNight = [_this,3,12,[0]] call BIS_fnc_param;" \n
-       "_lastUpdate = time;" \n
-       "_lastServUpdate = time;" \n
-       "_hcSync = time;" \n
-       "_lastSync = time;" \n
        "" \n
        "//Setup our vars." \n
-       "_skipTime = _skipDay;"/*%FSM</STATEINIT""">*/;
+       "_skipTime = _skipDay;" \n
+       "" \n
+       "_sunState = sunOrMoon;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
