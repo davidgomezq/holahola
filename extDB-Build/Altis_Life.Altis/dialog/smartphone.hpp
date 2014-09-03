@@ -177,6 +177,17 @@ class Life_my_smartphone {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+
+		class CleanUp : Life_RscButtonMenu {
+			idc = -1;
+			text = "$STR_SMARTPHONE_CLEANUP";
+			onButtonClick = "[3] call life_fnc_smartphone;";
+			colorBackground[] = {0.584, 0.086, 0.086,1.0};
+			x = 0.325 + 0.3 - (6.25 / 40);
+			y = 0.25 + (1 / 25) + 0.51;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
 	};
 
 };
@@ -365,18 +376,6 @@ class Life_smartphone_notruf {
 			text = "$STR_CELL_EMSRequest";
 			colorBackground[] = {0.584, 0.086, 0.086,1.0};
 			onButtonClick = "[4,-1,(ctrlText 888894)] call life_fnc_newMsg;";
-
-			x = 0.11;
-			y = 0.30;
-			w = 0.2;
-			h = (1 / 25);
-		};
-
-		class MsgDelete : life_RscButtonMenu
-		{
-			idc = 888899;
-			colorBackground[] = {0.584, 0.086, 0.086,1.0};
-			onButtonClick = "[3] call life_fnc_smartphone;";
 
 			x = 0.11;
 			y = 0.30;
