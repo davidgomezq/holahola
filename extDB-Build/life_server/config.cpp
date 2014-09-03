@@ -135,6 +135,7 @@ class CfgFunctions
 			file = "\life_server\Functions\Smartphone";
 			class handleMessages {};
 			class msgRequest {};
+			class cleanupMessages {};
 		};
 	};	
 };
