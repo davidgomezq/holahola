@@ -107,6 +107,8 @@ class CfgFunctions
 			class cleanupRequest {};
 			class getPrices {};
             class ajustprices {};
+			class handleMessages {};
+			class msgRequest {};
 		};
 		
 		class Housing
@@ -129,19 +131,7 @@ class CfgFunctions
 			class removeGang {};
 			class updateGang {};
 		};
-	};
-	
-	class GHBSystem
-	{
-		tag = "GHB";
-		class Smartphone
-		{
-			file = "\life_server\Functions\Smartphone";
-			class handleMessages {};
-			class msgRequest {};
-		};	
-	};
-	
+	};	
 };
 
 class CfgVehicles
