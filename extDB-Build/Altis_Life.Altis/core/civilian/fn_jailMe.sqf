@@ -15,7 +15,7 @@ _time = time + (_time * 60); //x Minutes
 
 //if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
 
-if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 1500; _time = time + (10 * 60); };
+if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 1500; /*_time = time + (10 * 60);*/ };
 _esc = false;
 _bail = false;
 
