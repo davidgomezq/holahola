@@ -5,7 +5,7 @@
 	Description:
 	Main key handler for event 'keyDown'
 */
-private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys"];
+private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys","_HaveVehKey"];
 _ctrl = _this select 0;
 _code = _this select 1;
 _shift = _this select 2;
@@ -254,6 +254,7 @@ switch (_code) do
 	case 22:
 	{
 		if(!_alt && !_ctrlKey) then {
+			_HaveVehKey = false;
 			if(vehicle player == player) then {
 				_veh = cursorTarget;
 			} else {
@@ -286,6 +287,7 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						player say3D "car_lock";
+						_HaveVehKey = true;
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -294,7 +296,24 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehLock";
 						player say3D "car_unlock";
+						_HaveVehKey = true;
 					};
+				};
+			};
+			// TELO: Devuelve las llaves en caso de desconexion.
+			if(!_HaveVehKey && !(_veh isKindOf "House_F") && player distance _veh < 8) then {
+				_car_owners = _veh getVariable "vehicle_info_owners";
+				if(!isNil "_car_owners") then
+				{
+					{
+						_myUID = format["%1",getPlayerUID player];
+						_carUID = format["%1",_x select 0];
+						if(_myUID == _carUID) then
+						{
+							[[_veh],"life_fnc_addVehicle2Chain",player,false] spawn life_fnc_MP;
+							systemChat localize "STR_ISTR_Lock_AlreadyHave";
+						};
+					} forEach _car_owners;
 				};
 			};
 		};
