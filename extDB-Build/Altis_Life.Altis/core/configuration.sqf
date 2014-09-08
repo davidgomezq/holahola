@@ -397,3 +397,12 @@ life_garage_sell =
 	["B_MRAP_01_F",30000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+/*
+*****************************
+****** MAFIA  GAMMING *******
+*****************************
+*/
+
+MG_haveVehKey = false;
+MG_prevent_disconnect_inTime = false;

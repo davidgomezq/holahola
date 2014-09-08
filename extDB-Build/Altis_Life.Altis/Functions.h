@@ -396,4 +396,10 @@ class Life_Client_Core
 		class openEconomy {};
 		class virt_updateEconomy {};
 	};
+
+	class MafiaGamingAltis
+	{
+		file = "core\mafiaaltis";
+		class returnKey {};	// Telo: Devuelve las llaves de los coches de sus dueños en caso de desconexion.
+	};
 };

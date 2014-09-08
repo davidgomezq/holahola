@@ -157,6 +157,9 @@
 			<Italian>Il giocatore non esiste più</Italian>
 			<Portuguese>Jogador não existe mais?</Portuguese>
 		</Key>
+		<Key ID="STR_BTK_prevent_disconnect">
+			<Original>Personaje guardado en la base de datos. Detectada combinacion de teclas (ALT+F4, ALT+TAB, CTRL+ALT+DEL, CTRL+ESC). Si vuelves a intentarlo antes de 5 minutos seras expulsado del servidor.</Original>
+		</Key>
 	</Package>
 	<Package name="ATM_Strings">
 		<Key ID="STR_ATM_Title">
@@ -2825,7 +2828,7 @@
 			<Portuguese>Você não tem todo esse dinheiro!</Portuguese>
 		</Key>
 		<Key ID="STR_House_BuyMSG">
-			<Original>Esta cas esta disponible por &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt;Puede almacenar hasta %2 contenedores</Original>
+			<Original>Esta casa esta disponible por &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt;Puede almacenar hasta %2 contenedores</Original>
 			<English>This house is available for &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt;It supports up to %2 storage containers</English>
 			<German>Dieses Haus gibt es für &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt; Es unterstützt %2 Lagerbox(en)</German>
 			<French>Cette maison est disponible pour &lt;t color='#8cff9b'&gt;$%1&lt;/t&gt;&lt;br/&gt; Il prend en charge jusqu'à %2 conteneurs de stockage</French>

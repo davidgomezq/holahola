@@ -1,7 +1,7 @@
 /*
 	File: fn_revivePlayer.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Starts the revive process on the player.
 */
@@ -70,3 +70,5 @@ titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[(call life_r
 sleep 0.6;
 player reveal _target;
 [] call life_fnc_copUniform;
+// Telo: Volvemos a guardar el personaje en la DB, por que borramos el *_gear en la base de datos al morir.
+[] call SOCK_fnc_updateRequest;

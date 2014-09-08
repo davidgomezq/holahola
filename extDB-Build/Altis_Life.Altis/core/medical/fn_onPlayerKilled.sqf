@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_onPlayerKilled.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -6,7 +7,7 @@
 	When the player dies collect various information about that player
 	and pull up the death dialog / camera functionality.
 */
-private["_unit","_killer"];
+private["_unit","_killer","_uid"];
 disableSerialization;
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _killer = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -106,4 +107,6 @@ if (playerSide == civilian) then
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
+// Telo: Guardado correcto del personaje.
+[7] call SOCK_fnc_updatePartial;
 [] call life_fnc_copUniform;
