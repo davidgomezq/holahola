@@ -297,9 +297,10 @@ switch (_code) do
 						MG_haveVehKey = true;
 					};
 				};
+				if(!MG_haveVehKey && !(_veh isKindOf "House_F") && player distance _veh < 8) then {
+					[player,_veh] call life_fnc_returnKey;
+				};
 			};
-			// TELO: Devuelve las llaves en caso de desconexion.
-	    	[player,_veh] spawn life_fnc_returnKey;
 		};
 	};
 };
