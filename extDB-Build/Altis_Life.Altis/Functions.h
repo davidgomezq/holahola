@@ -401,5 +401,6 @@ class Life_Client_Core
 	{
 		file = "core\mafiaaltis";
 		class returnKey {};	// Telo: Devuelve las llaves de los coches de sus dueños en caso de desconexion.
+		class robShops {}; // Telo: Robo de gasolineras y tiendas
 	};
 };

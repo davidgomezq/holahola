@@ -5111,4 +5111,65 @@
 			<Original>Emergencias | Abuso = BAN!</Original>
 		</Key>
 	</Package>
+	<Package name="MafiaRobShop">
+		<Key ID="STR_ROBSHOP_CANTROB">
+			<Original>¡No puedes robar esta gasolinera!</Original>
+			<English>You can not rob this station!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_5M">
+			<Original>¡Necesitas estar a menos de 5m para robarle la caja!</Original>
+			<English>You need to be within 5m of the cashier to rob him!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_ROBINPROGRESS">
+			<Original>¡Robo en progreso!</Original>
+			<English>Robbery already in progress!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_OUTVEH">
+			<Original>¡Sal de tu vehiculo!</Original>
+			<English>Get out of your vehicle!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_IFCOP">
+			<Original>Es necesario que haya 1 policia como minimo para continuar.</Original>
+			<English>There needs to be 1 or more cops online to continue.</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_NEEDWEAPON">
+			<Original>¿Estas tonto pavo? ¡Coje un arma hombre!</Original>
+			<English>Get a weapon kiddo! Get out of here you hobo!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_NOMONEY">
+			<Original>¡No hay dinero en el registro!</Original>
+			<English>There is no cash in the register!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_POLICECOME">
+			<Original>¡La policia ha sido avisada al sonar la alarma!</Original>
+			<English>The asol hit the silent alarm, police has been alerted!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_TUOLETAS">
+			<Original>¡ALARMA! - ! %1 esta siendo robada!</Original>
+			<English>ALARM! - Tuoletas: %1 is being robbed!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_BARROB1">
+			<Original>Robo en progreso, estate quieto (10m) (1%1)...</Original>
+			<English>Robbery in Progress, stay close (10m) (1%1)...</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_BARROB2">
+			<Original>Robo en progreso ,estate quieto(10m) (%1%2)...</Original>
+			<English>Robbery in Progress, stay close (10m) (%1%2)...</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_ATTENTION">
+			<Original>¡ATENCION! ROBO ¡ATENCION!</Original>
+			<English>ATTENTION! robbery ATTENTION!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_10M">
+			<Original>¡Necesitas estar a menos de 10m para robar! - Ahora el registro está bloqueado.</Original>
+			<English>You need to stay within 10m to Rob registry! - Now the registry is locked.</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_SUCCESROB">
+			<Original>¡Has robado $%1, vete antes que los picoletos vengan!</Original>
+			<English>You have stolen $%1, now get away before the cops arrive!</English>
+		</Key>
+		<Key ID="STR_ROBSHOP_BUTTON">
+			<Original>Robar la gasolinera</Original>
+			<English>Rob the Gas Station</English>
+	</Package>
 </Project>
