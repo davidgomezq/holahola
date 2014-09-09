@@ -9,7 +9,7 @@ if(player diarySubjectExists "rules")exitwith{};
 //player createDiarySubject ["illegalitems","Illegal Activity"];
 //player createDiarySubject ["gangrules","Gang Rules"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
-//player createDiarySubject ["controls","Controls"];
+player createDiarySubject ["controls","CONTROLES"];
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -547,16 +547,13 @@ if(player diarySubjectExists "rules")exitwith{};
 
 	player createDiaryRecord ["controls",
 		[
-			"",
+			"Controles Basicos",
 				"
-				Y: Open Player Menu<br/>
-				U: Lock and unlock cars<br/>
-				F: Cop Siren (if cop)<br/>
-				T: Vehicle Trunk<br/>
-				Left Shift + R: Restrain (Cop Only)<br/>
-				Left Shift + G: Knock out / stun (Civ Only, used for robbing them)<br/>
-				Left Windows: Main Interaction key which is used for picking up items/money, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
-				Left Shift + L: Activates cop siren lights (as a cop).<br/>
+				Y: Menu de jugador<br/>
+				U: Abrir/Cerrar el coche y recuperar las llaves del coche<br/>
+				Shift Izq + R: Arrestar<br/>
+				Shift Izq + G: Noquear<br/>
+				Windows izq: Es el boton universal para todo, se utiliza para recoger objetos/dinero de las actividades (recoger melocotones, marihuana, cocaina...) y para reparar/desvolcar el vehiculo y tendras mas opciones si eres rebelde o policia.<br/>
 				"
 		]
 	];
