@@ -66,8 +66,13 @@ switch(_mode) do {
 		_query = format["UPDATE players SET cash='%1', bankacc='%2' WHERE playerid='%3'",_value1,_value2,_uid];
 	};
 
-	// Telo Explot FIX: Eliminamos de la DB el *_gear.
 	case 7: {
+		_array = [_this,2,[],[[]]] call BIS_fnc_param;
+		[_uid,_side,_array,0] call TON_fnc_keyManagement;
+	};
+
+	// Telo Explot FIX: Eliminamos de la DB el *_gear.
+	case 9: {
 		switch(_side) do {
 			case west: {_query = format["UPDATE players SET cop_gear='""[]""' WHERE playerid='%1'",_uid];};
 			case civilian: {_query = format["UPDATE players SET civ_gear='""[]""' WHERE playerid='%1'",_uid];};

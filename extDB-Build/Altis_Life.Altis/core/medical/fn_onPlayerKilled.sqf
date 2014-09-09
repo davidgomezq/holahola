@@ -108,5 +108,5 @@ if (playerSide == civilian) then
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
 // Telo: Guardado correcto del personaje.
-[7] call SOCK_fnc_updatePartial;
+[9] call SOCK_fnc_updatePartial;
 [] call life_fnc_copUniform;
