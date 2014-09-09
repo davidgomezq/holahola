@@ -5145,8 +5145,8 @@
 			<English>The asol hit the silent alarm, police has been alerted!</English>
 		</Key>
 		<Key ID="STR_ROBSHOP_TUOLETAS">
-			<Original>¡ALARMA! - ! %1 esta siendo robada!</Original>
-			<English>ALARM! - Tuoletas: %1 is being robbed!</English>
+			<Original>¡ALARMA! !Una gasolinera esta siendo robada!</Original>
+			<English>ALARM! - Gas Station: is being robbed!</English>
 		</Key>
 		<Key ID="STR_ROBSHOP_BARROB1">
 			<Original>Robo en progreso, estate quieto (10m) (1%1)...</Original>

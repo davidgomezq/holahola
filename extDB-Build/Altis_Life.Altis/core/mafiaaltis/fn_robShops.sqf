@@ -32,7 +32,7 @@ _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
 if(_chance >= 80) then {
 	hint localize "STR_ROBSHOP_POLICECOME";
-	[[1,format[localize "STR_ROBSHOP_TUOLETAS", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[1,format[localize "STR_ROBSHOP_TUOLETAS"]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 };
 
 disableSerialization;
