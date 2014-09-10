@@ -15,7 +15,7 @@
 			NUMBER - the function will be executed only on client with the given ID
 			ARRAY - array of previous data types
 		3 (Optional): BOOL - true for persistent call (will be called now and for every JIP client) [default: false]
-	
+
 	Returns:
 	ARRAY - sent packet
 */

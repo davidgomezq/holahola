@@ -5111,6 +5111,12 @@
 			<Original>Emergencias | Abuso = BAN!</Original>
 		</Key>
 	</Package>
+	<Package name="MafiaGaming">
+		<Key ID="STR_MAFIA_POSITION">
+			<Original>¡Sigues vivo!. Tu personaje ha guardado la ultima posicion guardada.</Original>
+			<English>Your character is still alive. You have been placed at your last saved position.</English>
+		</Key>
+	</Package>
 	<Package name="MafiaRobShop">
 		<Key ID="STR_ROBSHOP_CANTROB">
 			<Original>¡No puedes robar esta gasolinera!</Original>
@@ -5171,5 +5177,6 @@
 		<Key ID="STR_ROBSHOP_BUTTON">
 			<Original>Robar la gasolinera</Original>
 			<English>Rob the Gas Station</English>
+		</Key>
 	</Package>
 </Project>

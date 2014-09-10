@@ -252,7 +252,6 @@ switch (_code) do
 	case 22:
 	{
 		if(!_alt && !_ctrlKey) then {
-			MG_haveVehKey = false;
 			if(vehicle player == player) then {
 				_veh = cursorTarget;
 			} else {
@@ -285,7 +284,6 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						player say3D "car_lock";
-						MG_haveVehKey = true;
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
@@ -294,11 +292,7 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehLock";
 						player say3D "car_unlock";
-						MG_haveVehKey = true;
 					};
-				};
-				if(!MG_haveVehKey && !(_veh isKindOf "House_F") && player distance _veh < 8) then {
-					[player,_veh] call life_fnc_returnKey;
 				};
 			};
 		};
