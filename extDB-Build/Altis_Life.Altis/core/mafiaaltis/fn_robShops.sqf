@@ -26,14 +26,11 @@ if (currentWeapon _robber == "") exitWith { hint localize "STR_ROBSHOP_NEEDWEAPO
 if (_kassa == 0) exitWith { hint localize "STR_ROBSHOP_NOMONEY" };
 
 _rip = true;
-_kassa = 5000 + round(random 10000);
+_kassa = 15000 + round(random 30000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
-_chance = random(100);
-if(_chance >= 80) then {
-	hint localize "STR_ROBSHOP_POLICECOME";
-	[[1,format[localize "STR_ROBSHOP_TUOLETAS"]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-};
+hint localize "STR_ROBSHOP_POLICECOME";
+[[1,format[localize "STR_ROBSHOP_TUOLETAS"]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -48,7 +45,7 @@ if(_rip) then
 {
 	while{true} do
 	{
-		sleep 0.85;
+		sleep 1.8;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format[localize "STR_ROBSHOP_BARROB2",round(_cP * 100),"%"];
@@ -79,6 +76,6 @@ if(_rip) then
 	if!(alive _robber) exitWith {};
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };
-sleep 300;
+sleep (600 + random(900));
 _action = _shop addAction["Robar la gasolinera",life_fnc_robShops];
 _shop switchMove "";

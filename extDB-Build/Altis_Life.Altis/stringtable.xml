@@ -4573,7 +4573,7 @@
 	</Package>
 	<Package name="Shop_Strings">
 		<Key ID="STR_Shop_ATMRobbed">
-			<Original>Ya que ha robado un banco no puede usar el ATM en 5 minutos.</Original>
+			<Original>Tu cuenta bancaria esta bloqueada a causa de una investigación policial, vuelve a intentarlo mas tarde.</Original>
 			<English>Because you robbed the bank you can't use the ATM for 5 minutes.</English>
 			<German>Da du die Bank ausgeraubt hast, kannst du für 5 Minuten keine Bankomaten benutzen.</German>
 			<French>Vous avez pillé la banque, vous ne pouvez pas utiliser le guichet automatique pendant 5 minutes.</French>
