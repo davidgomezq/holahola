@@ -1,7 +1,7 @@
 /*
 	File: fn_clothingMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
@@ -87,12 +87,12 @@ if(isNil "life_clothesPurchased") exitWith
 			};
 		};
 	};
-	
+
 	if(count life_oldUniformItems > 0) then
 	{
 		{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldUniformItems;
 	};
-	
+
 	if(vest player != "") then
 	{
 		if(life_oldVest == "") then
@@ -126,7 +126,7 @@ if((life_clothing_purchase select 2) == -1) then
 {
 	if(life_oldGlasses != goggles player) then
 	{
-		if(life_oldGlasses == "") then 
+		if(life_oldGlasses == "") then
 		{
 			removeGoggles player;
 		}
@@ -166,4 +166,4 @@ if((life_clothing_purchase select 4) == -1) then
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 
 [] call life_fnc_saveGear;
-[] call life_fnc_copUniform;
+[] spawn life_fnc_copUniform;

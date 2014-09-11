@@ -49,5 +49,3 @@ else
 
 player addRating 9999999;
 [] execVM "IntroCiv.sqf";
-
-[] call life_fnc_copUniform;

@@ -34,8 +34,8 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			["textures\cop_hatchback.jpg","cop"],
-			["textures\hatchback_local.jpg","cop"]
+			["textures\vehiculos\cop_hatchback.jpg","cop"],
+			["textures\vehiculos\hatchback_local.jpg","cop"]
 		];
 	};
 
@@ -52,11 +52,11 @@ switch (_vehicle) do
 			["#(ai,64,64,1)Fresnel(0.3,3)","fed"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
 			["#(argb,8,8,3)color(0.6,0.3,0.01,1)","civ"],
-			["textures\police_offroad.jpg","cop"],
-			["textures\offroad_01_ext_base02_co.jpg","cop"],
-			["textures\geo_offroad.jpg","cop"],
-			["textures\police_offroad_local.jpg","cop"],
-			["textures\offroad_notarzt.jpg","med"]
+			["textures\vehiculos\police_offroad.jpg","cop"],
+			["textures\vehiculos\offroad_01_ext_base02_co.jpg","cop"],
+			["textures\vehiculos\geo_offroad.jpg","cop"],
+			["textures\vehiculos\police_offroad_local.jpg","cop"],
+			["textures\vehiculos\offroad_notarzt.jpg","med"]
 		];
 	};
 
@@ -72,8 +72,8 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"],
-			["textures\cop_hatchback.jpg","cop"],
-			["textures\hatchback_local.jpg","cop"]
+			["textures\vehiculos\cop_hatchback.jpg","cop"],
+			["textures\vehiculos\hatchback_local.jpg","cop"]
 		];
 	};
 
@@ -86,9 +86,9 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"],
-			["textures\suv_01_ext_co.jpg","cop"],
-			["textures\cop_suv.jpg","cop"],
-			["textures\medic_suv_FINAL.jpg","med"]
+			["textures\vehiculos\suv_01_ext_co.jpg","cop"],
+			["textures\vehiculos\cop_suv.jpg","cop"],
+			["textures\vehiculos\medic_suv_FINAL.jpg","med"]
 		];
 	};
 
@@ -123,8 +123,8 @@ switch (_vehicle) do
 			["\A3\Soft_F_beta\Quadbike_01\Data\quadbike_01_indp_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","civ"],
 			["\a3\soft_f_gamma\Quadbike_01\data\quadbike_01_indp_hunter_co.paa","reb"],
-			["textures\quadbike_local.jpg","cop"],
-			["textures\Quadbike_01_co.jpg","cop"]
+			["textures\vehiculos\quadbike_local.jpg","cop"],
+			["textures\vehiculos\Quadbike_01_co.jpg","cop"]
 		];
 	};
 
@@ -147,8 +147,8 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
 			["#(argb,8,8,3)color(1,1,1,0.8)","med"],
-			["textures\police_heli.jpg","cop"],
-			["textures\medic_heli.jpg","med"]
+			["textures\vehiculos\police_heli.jpg","cop"],
+			["textures\vehiculos\medic_heli.jpg","med"]
 		];
 	};
 
@@ -170,7 +170,7 @@ switch (_vehicle) do
 		[
 			["\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa","cop"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"],
-			["textures\mrap_01_base_co.jpg","cop","textures\mrap_01_adds_co.jpg"]
+			["textures\vehiculos\mrap_01_base_co.jpg","cop","textures\vehiculos\mrap_01_adds_co.jpg"]
 		];
 	};
 
@@ -204,8 +204,8 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-			["textures\medic_heli_FINAL.jpg","med"],
-			["textures\heli_light_03_cop.jpg","cop"]
+			["textures\vehiculos\medic_heli_FINAL.jpg","med"],
+			["textures\vehiculos\heli_light_03_cop.jpg","cop"]
 		];
 	};
 
@@ -216,12 +216,12 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
-	
+
 	case "I_MRAP_03_F":
 	{
 		_ret =
 		[
-			["textures\strider.jpg","cop"]
+			["textures\vehiculos\strider.jpg","cop"]
 		];
 	};
 };

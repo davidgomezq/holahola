@@ -1,7 +1,7 @@
 /*
     File: fn_loadGear.sqf
     Author: Bryan "Tonic" Boardwine
-    
+
     Description:
     Loads saved civilian gear, this is limited for a reason and that's balance.
 */
@@ -18,7 +18,7 @@ if(count _itemArray == 0) exitWith
         case west: {
             [] call life_fnc_copLoadout;
         };
-        
+
         case civilian: {
             [] call life_fnc_civLoadout;
         };
@@ -83,5 +83,5 @@ if(_seco != "") then {_handle = [_seco,true,false,false,false] spawn life_fnc_ha
 } foreach (_hItems);
 
 if(playerSide == independent && {uniform player == "U_Rangemaster"}) then {
-	[[player,0,"textures\medic_uniform.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+	[[player,0,"textures\uniformes\medic_uniform.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
 };

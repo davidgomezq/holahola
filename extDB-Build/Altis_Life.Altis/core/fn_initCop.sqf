@@ -2,7 +2,7 @@
 /*
 	File: fn_initCop.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Cop Initialization file.
 */
@@ -22,7 +22,7 @@ if(!(str(player) in [""])) then {
 		sleep 35;
 	};
 	// Pago de donadores
-switch (__GETC__(life_donator)) do 
+switch (__GETC__(life_donator)) do
 			{
 				case 1: { _donatorlevel = 500; }; //Level 1
 				case 2: { _donatorlevel = 1000; }; //Level 2
@@ -31,7 +31,7 @@ switch (__GETC__(life_donator)) do
 			};
 
 // Pago de rangos policiales
-switch (__GETC__(life_coplevel)) do 
+switch (__GETC__(life_coplevel)) do
 			{
 				case 1: { life_paycheck = ((2000) + (_donatorlevel)); }; //Cadete
 				case 2: { life_paycheck = ((3000) + (_donatorlevel)); }; //Oficial
@@ -46,9 +46,10 @@ switch (__GETC__(life_coplevel)) do
 
 
 player setVariable["rank",(__GETC__(life_coplevel)),true];
+
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 
 [] execVM "IntroCop.sqf";
-[] call life_fnc_copUniform;
+[] spawn life_fnc_copUniform;

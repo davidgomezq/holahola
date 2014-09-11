@@ -298,7 +298,6 @@ class Life_Client_Core
 		class repairDoor {};
 		class doorAnimate {};
 		class fedCamDisplay {};
-		class copUniform {};
 		class copOpener {};
 		class copLoadout {};
 		class showArrestDialog {};
@@ -401,5 +400,6 @@ class Life_Client_Core
 	{
 		file = "core\mafiaaltis";
 		class robShops {}; // Telo: Robo de gasolineras y tiendas
+		class copUniform {}; // Telo: Uniformes de policia
 	};
 };
