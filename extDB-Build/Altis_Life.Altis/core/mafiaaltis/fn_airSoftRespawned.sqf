@@ -12,11 +12,10 @@ life_thirst = 100;
 life_carryWeight = 0;
 life_is_alive = true;
 MG_AirSoftRespawned = false;
-player enableFatigue true;
 
 // Telo: Broadcast de vida
-if (MG_AirSoftCurrentLife <= 0) then {
-	MG_InAirSoft = false;
+if (MG_AirSoftCurrentLife < 1) then {
+	player enableFatigue true;
 	// Telo: Cargamos el equipo del jugador.
 	[MG_AirSoftGear] spawn life_fnc_loadDeadGear;
 } else {

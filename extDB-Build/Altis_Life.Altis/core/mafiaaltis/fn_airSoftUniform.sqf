@@ -4,7 +4,6 @@
 
 	Description: Equipo de AirSoft
 */
-systemChat "EQUIPOOOO";
 RemoveAllWeapons player;
 {player removeMagazine _x;} foreach (magazines player);
 removeUniform player;

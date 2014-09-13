@@ -39,7 +39,7 @@ _unit spawn
 	_RespawnBtn = ((findDisplay 7345) displayCtrl 7346);
 	_Timer = ((findDisplay 7345) displayCtrl 7347);
 
-	_maxTime = time + 5;
+	_maxTime = time + 7;
 	_RespawnBtn ctrlEnable false;
 	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString];
 	round(_maxTime - time) <= 0 OR isNull _this};

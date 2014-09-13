@@ -17524,7 +17524,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			position[]={25412.699,9.848959,20338.301};
@@ -17537,11 +17537,31 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			text="airsoft_trigger";
-			name="airsoft_trigger";
-			expCond="this && (local player) && (vehicle player in thisList)";
-			expActiv="if (!MG_InAirSoft) then {	hint ""Has entrado en la zona de AirSoft."";	player setPos (getMarkerPos ""airsoft_intruso"");	};";
-			expDesactiv="if (MG_InAirSoft) then {	hint ""No puedes salir asi de la zona de AirSoft."";	player setPos (getMarkerPos ""airsoft_spawn7"");	};";
+			text="airsoft_trigger1";
+			name="airsoft_trigger1";
+			expCond="this && (local player) && (vehicle player in thisList) && !MG_InAirSoft";
+			expActiv="hint ""Has entrado en la zona de AirSoft."";	player setPos (getMarkerPos ""airsoft_intruso"");";
+			class Effects
+			{
+				sound="Alarm";
+			};
+		};
+		class Item1
+		{
+			position[]={25412.699,9.848959,20338.301};
+			a=83;
+			b=70;
+			angle=60;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			text="airsoft_trigger2";
+			name="airsoft_trigger2";
+			expCond="this && (local player) && (vehicle player in thisList) && MG_InAirSoft";
+			expDesactiv="hint ""No puedes salir asi de la zona de AirSoft."";	player setPos (getMarkerPos ""airsoft_spawn7"");";
 			class Effects
 			{
 				sound="Alarm";

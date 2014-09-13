@@ -6,7 +6,7 @@
 	Spawn en la ciudad correspondiente.
 */
 private["_selectSpawnPoint"];
-//disableSerialization;
+disableSerialization;
 
 MG_AirSoftCurrentLife = MG_AirSoftCurrentLife - 1;
 [] spawn life_fnc_airSoftRespawned;
@@ -15,7 +15,7 @@ cutText["","BLACK FADED"];
 0 cutFadeOut 2;
 (findDisplay 38500) displaySetEventHandler ["keyDown","_this call life_fnc_displayHandler"];
 
-if (MG_AirSoftCurrentLife <= 0) then {
+if (MG_AirSoftCurrentLife < 1) then {
 	switch(MG_AirSoftCityNPC) do
 	{
 		case 0: {
@@ -31,6 +31,7 @@ if (MG_AirSoftCurrentLife <= 0) then {
 			player setPos (getMarkerPos "airsoft_sofia");
 		};
 	};
+	MG_InAirSoft = false;
 } else {
 	_selectSpawnPoint = round(random(6));
 	switch (_selectSpawnPoint) do

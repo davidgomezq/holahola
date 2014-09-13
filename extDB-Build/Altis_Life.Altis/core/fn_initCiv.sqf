@@ -40,16 +40,8 @@ else
 		life_is_arrested = false;
 		[player,true] spawn life_fnc_jail;
 	} else {
-		// Telo: Si un jugador se conecta en la zona de airsoft tiene que salir de ahi
-		if(player distance (getMarkerPos "airsoft_marker") < 75) then
-		{
-			[] call life_fnc_spawnMenu;
-			waitUntil{!isNull (findDisplay 38500)};
-			waitUntil{isNull (findDisplay 38500)};
-		} else {
-			player setPos _playerPosition;
-			hint format[localize "STR_MAFIA_POSITION"];
-		}
+		player setPos _playerPosition;
+		hint format[localize "STR_MAFIA_POSITION"];
 	};
 	life_is_alive = true;
 };
