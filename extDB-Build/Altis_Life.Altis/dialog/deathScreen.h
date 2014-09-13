@@ -32,7 +32,7 @@ class DeathScreen
 			w = 0.8;
 			h = (1 / 25);
 		};
-		
+
 		class RespawnBtn : Life_RscButtonMenu
 		{
 			idc = 7302;

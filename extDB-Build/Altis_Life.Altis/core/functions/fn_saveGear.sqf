@@ -3,10 +3,11 @@
     Author: Bryan "Tonic" Boardwine
     Full Gear/Y-Menu Save by Vampire
     Edited: Itsyuka
-    
+
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
+if (MG_InAirSoft) exitWith {};
 private["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled"];
 _return = [];
 

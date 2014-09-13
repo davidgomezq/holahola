@@ -1,7 +1,7 @@
 /*
 	File: fn_loadDeadGear.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	BLAH
 */
@@ -57,7 +57,7 @@ if(_handgun != "") then {[_handgun,true,false,false,false] spawn life_fnc_handle
 {[_x,true,true,false,false] call life_fnc_handleItem;} foreach (_bitems);
 {[_x,true,false,true,false] call life_fnc_handleItem;} foreach (_primitems);
 {[_x,true,false,true,false] call life_fnc_handleItem;} foreach (_secitems);
-{[_x,true,false,true,false] call life_fnc_handleItem;} foreach (_handgunitems);  
+{[_x,true,false,true,false] call life_fnc_handleItem;} foreach (_handgunitems);
 
 if(_headgear != "") then {player addHeadGear _headgear};
 if(_goggles != "") then {player addGoggles _goggles};

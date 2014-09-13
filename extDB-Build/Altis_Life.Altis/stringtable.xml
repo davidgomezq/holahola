@@ -157,9 +157,6 @@
 			<Italian>Il giocatore non esiste più</Italian>
 			<Portuguese>Jogador não existe mais?</Portuguese>
 		</Key>
-		<Key ID="STR_BTK_prevent_disconnect">
-			<Original>Personaje guardado en la base de datos. Detectada combinacion de teclas (ALT+F4, ALT+TAB, CTRL+ALT+DEL, CTRL+ESC). Si vuelves a intentarlo antes de 5 minutos seras expulsado del servidor.</Original>
-		</Key>
 	</Package>
 	<Package name="ATM_Strings">
 		<Key ID="STR_ATM_Title">

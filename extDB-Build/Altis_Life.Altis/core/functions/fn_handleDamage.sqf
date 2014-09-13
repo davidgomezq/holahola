@@ -1,7 +1,7 @@
 /*
 	File: fn_handleDamage.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
 */
@@ -27,7 +27,7 @@ if(!isNull _source) then {
 				_distance = if(_projectile == "30Rnd_65x39_caseless_mag_Tracer") then {150} else {45};
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				_isQuad = if(_isVehicle) then {if(typeOf (vehicle player) == "B_Quadbike_01_F") then {true} else {false}} else {false};
-				
+
 				_damage = 0;
 				if(_unit distance _source < _distance) then {
 					if(!life_istazed && !(_unit getVariable["restrained",false])) then {
@@ -40,6 +40,15 @@ if(!isNull _source) then {
 					};
 				};
 			};
+		};
+	};
+};
+
+// Telo - AirSoft: Si el jugador es inmune no le puedes hacer daño, pero el a los demas tampoco.
+if(!isNull _source) then {
+	if(_source != _unit) then {
+		if ((_source getVariable "Immune")) then {
+			_damage = 0;
 		};
 	};
 };

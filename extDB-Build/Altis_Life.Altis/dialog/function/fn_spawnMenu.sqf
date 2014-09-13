@@ -1,7 +1,7 @@
 /*
 	File: fn_spawnMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Initializes the spawn point selection menu.
 */
@@ -15,6 +15,7 @@ if(life_is_arrested) exitWith {
 if(life_respawned) then {
 	[] call life_fnc_respawned;
 };
+
 cutText["","BLACK FADED"];
 0 cutFadeOut 9999999;
 if(!(createDialog "life_spawn_selection")) exitWith {[] call life_fnc_spawnMenu;};

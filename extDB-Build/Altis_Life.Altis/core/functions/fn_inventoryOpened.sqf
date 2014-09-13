@@ -39,12 +39,11 @@ if(_container isKindOf "LandVehicle" OR _container isKindOf "Ship" OR _container
 	};
 };
 
-//Allow alive players who've been knocked out to be looted, just not the dead ones
-//TELO: Siempre se ha permitido lootear cuerpos de jugadores muertos, cambio introducido en la version 3.1.4.6 y deshabilitado por Telo.
-/*if(_container isKindOf "Man" && !alive _container) exitWith {
+// Telo: No se pueden lootear los cuerpos de jugadores muertos en el AirSoft.
+if(_container isKindOf "Man" && !alive _container && (_container getVariable "MG_InAirSoft")) exitWith {
 	hint localize "STR_NOTF_NoLootingPerson";
 	[] spawn {
 		waitUntil {!isNull (findDisplay 602)};
 		closeDialog 0;
 	};
-};*/
+};

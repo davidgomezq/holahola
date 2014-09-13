@@ -27,3 +27,5 @@
 #include "smartphone.hpp"
 #include "jail_time.hpp"
 #include "market.hpp"
+// Mafia Gaming
+#include "airSoftdeathScreen.h"

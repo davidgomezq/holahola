@@ -403,6 +403,10 @@ __CONST__(life_garage_sell,life_garage_sell);
 ****** MAFIA  GAMMING *******
 *****************************
 */
-
-MG_haveVehKey = false;
-MG_prevent_disconnect_inTime = false;
+// Air Soft
+MG_InAirSoft = false;
+MG_AirSoftRespawned = false;
+MG_AirSoftLifes = 3;
+MG_AirSoftCurrentLife = MG_AirSoftLifes;
+MG_AirSoftGear = 0;
+MG_AirSoftCityNPC = 0; // Telo: Kavala = 0  Athira = 1  Pyrgos = 2  Sofia = 3

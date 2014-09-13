@@ -401,5 +401,11 @@ class Life_Client_Core
 		file = "core\mafiaaltis";
 		class robShops {}; // Telo: Robo de gasolineras y tiendas
 		class copUniform {}; // Telo: Uniformes de policia
+		class airSoftShop {}; // Telo: airSoft
+		class airSoftDeath {}; // Telo: airSoft
+		class airSoftSpawn {}; // Telo: airSoft
+		class airSoftRespawned {}; // Telo: airSoft
+		class airSoftImmune {}; // Telo: airSoft
+		class airSoftUniform {}; // Telo: airSoft
 	};
 };

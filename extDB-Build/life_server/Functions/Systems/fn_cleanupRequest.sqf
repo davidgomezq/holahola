@@ -1,6 +1,6 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Client sends a cleanup request when they hit Abort,
 	the server will then monitor when that client aborts and
@@ -20,7 +20,7 @@ while {true} do {
 		};
 		deleteVehicle _client; //Get rid of the corpse.
 	};
-	
+
 	_loops = _loops + 1;
 	sleep 1;
 };
