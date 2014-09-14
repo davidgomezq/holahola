@@ -57,5 +57,6 @@ player addItem "ItemWatch";
 player assignItem "ItemWatch";
 player addItem "ItemGPS";
 player assignItem "ItemGPS";
+player addGoggles "NVGoggles";
 
 [] spawn life_fnc_airSoftImmune;

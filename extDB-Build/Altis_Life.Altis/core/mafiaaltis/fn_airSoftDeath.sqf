@@ -55,6 +55,11 @@ _unit spawn
 	waitUntil {if(speed _unit == 0) exitWith {true}; life_deathCamera camSetTarget _unit; life_deathCamera camSetRelPos [0,3.5,4.5]; life_deathCamera camCommit 0;};
 };
 
+// Telo: Hay que enviar el dinero al matador.
+if (!isNull _killer) then {
+	[[1000,profileName],"TON_fnc_airSoftMoneyKill",_killer,false] spawn life_fnc_MP;
+};
+
 if (playerSide == civilian) then
 {
     life_is_alive = false;
