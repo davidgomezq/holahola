@@ -19,7 +19,6 @@ MG_AirSoftCurrentLife = MG_AirSoftLifes;
 // Telo: Seteo de variables
 MG_InAirSoft = true;
 life_cash = life_cash - 1000;
-player enableFatigue false;
 
 // Telo: Teleport
 _selectSpawnPoint = round(random(6));
@@ -49,3 +48,4 @@ switch (_selectSpawnPoint) do
 };
 
 [] call life_fnc_airSoftUniform;
+[] spawn life_fnc_airSoftFatigue;

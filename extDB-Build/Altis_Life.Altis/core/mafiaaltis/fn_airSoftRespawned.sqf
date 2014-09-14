@@ -15,7 +15,6 @@ MG_AirSoftRespawned = false;
 
 // Telo: Broadcast de vida
 if (MG_AirSoftCurrentLife < 1) then {
-	player enableFatigue true;
 	// Telo: Cargamos el equipo del jugador.
 	[MG_AirSoftGear] spawn life_fnc_loadDeadGear;
 } else {

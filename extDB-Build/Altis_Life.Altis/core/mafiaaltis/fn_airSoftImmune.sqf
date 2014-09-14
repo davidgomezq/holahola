@@ -7,6 +7,7 @@
 private["_time"];
 player allowDamage false;
 player setVariable["Immune",true,true];
+player addUniform "U_BasicBody";
 
 _time = 10;
 while{_time > 0} do
@@ -17,6 +18,7 @@ while{_time > 0} do
 	_time = _time - 1;
 };
 
+player addUniform "U_I_CombatUniform";
 player allowDamage true;
 player setVariable["Immune",false,true];
 hint "Has dejado de ser inmune. ¡Cuida tu culo!";
