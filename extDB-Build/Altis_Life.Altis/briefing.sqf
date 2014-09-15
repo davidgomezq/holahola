@@ -6,7 +6,7 @@ if(player diarySubjectExists "rules")exitwith{};
 //player createDiarySubject ["policerules","Police Procedures/Rules"];
 //player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 //player createDiarySubject ["civrules","Civilian Rules"];
-//player createDiarySubject ["illegalitems","Illegal Activity"];
+player createDiarySubject ["illegalitems","Objetos ilegales"];
 //player createDiarySubject ["gangrules","Gang Rules"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
 player createDiarySubject ["controls","CONTROLES"];
@@ -470,7 +470,7 @@ player createDiarySubject ["controls","CONTROLES"];
 
 
 
-// Illegal Items Section
+/* Illegal Items Section
 	player createDiaryRecord ["illegalitems",
 		[
 			"Rebel Rules",
@@ -497,47 +497,47 @@ player createDiarySubject ["controls","CONTROLES"];
 				"
 		]
 	];
+	*/
 	player createDiaryRecord ["illegalitems",
 		[
-			"Illegal Vehicles",
+			"Vehiculos Ilegales",
 				"
-				A civilian in control of the following prohibited vehicles is subject to the consequences defined in the unauthorized control of a prohibited vehicle law.<br/><br/>
+				Cualquiera de los siguiente vehiculos esta prohibida su circulacion.<br/><br/>
 
 				1. Ifrit<br/>
-				2. Speedboat<br/>
-				3. Hunter<br/>
-				4. Police Offroad<br/>
+				2. Offroad artillado<br/>
+				3. Cualquier coche Policial<br/>
 				"
 		]
 	];
 	player createDiaryRecord ["illegalitems",
 		[
-			"Illegal Weapons",
+			"Armas ilegales",
 				"
-				A civilian in possession of the following is subject to the consequences as defined in the illegal possession of a firearm law.<br/><br/>
+				Las siguientes armas se consideran ilegales para cualquier civil de Altis:<br/><br/>
 
-				1. MX Series<br/>
-				2. Katiba Series<br/>
-				3. TRG Series<br/>
-				4. Mk.20 Series<br/>
-				5. Mk.18 ABR<br/>
-				6. SDAR Rifle<br/>
-				7. Sting SMG<br/>
-				8. Silenced P07 (Taser)<br/>
-				9. Any explosives<br/><br/>
+				1. Serie Mx<br/>
+				2. Serie Katiba<br/>
+				3. Serie TRG<br/>
+				4. Serie MK20<br/>
+				5. MK18<br/>
+				6. Rifle SDAR<br/>
+				7. Sting<br/>
+				8. P07 (Taser)<br/>
+				9. Cualquier Explosivo<br/><br/>
 				"
 		]
 	];
 	player createDiaryRecord ["illegalitems",
 		[
-			"Illegal Items",
+			"Objetos Ilegales",
 				"
-				The following items are illegal to posses:<br/><br/>
-				1. Turtle<br/>
-				2. Cocaine<br/>
-				3. Heroin<br/>
+				Los siguientes objetos se consideran ilegales para la policia y civiles:<br/><br/>
+				1. Tortugas<br/>
+				2. Cocaina<br/>
+				3. Heroina<br/>
 				4. Cannabis<br/>
-				5. Marijuana<br/><br/>
+				5. Marihuana<br/><br/>
 				"
 		]
 	];
@@ -554,6 +554,7 @@ player createDiarySubject ["controls","CONTROLES"];
 				Shift Izq + R: Arrestar<br/>
 				Shift Izq + G: Noquear<br/>
 				Windows izq: Es el boton universal para todo, se utiliza para recoger objetos/dinero de las actividades (recoger melocotones, marihuana, cocaina...) y para reparar/desvolcar el vehiculo y tendras mas opciones si eres rebelde o policia.<br/>
+				Tabulador: Para rendirse</br>
 				"
 		]
 	];
