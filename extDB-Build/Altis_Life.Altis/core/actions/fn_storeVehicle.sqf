@@ -1,7 +1,7 @@
 /*
 	File: fn_storeVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Stores the vehicle in the garage.
 */

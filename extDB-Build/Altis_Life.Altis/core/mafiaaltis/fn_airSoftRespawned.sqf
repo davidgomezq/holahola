@@ -29,7 +29,7 @@ player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
 
-// Telo: Limpiamos el suelo de cadaveres y armas...
+// Telo: Limpiamos el suelo de cadaveres...
 if(!isNull life_corpse) then {
 	private["_containers"];
 	life_corpse setVariable["Revive",TRUE,TRUE];

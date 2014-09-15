@@ -16,6 +16,8 @@ cutText["","BLACK FADED"];
 (findDisplay 38500) displaySetEventHandler ["keyDown","_this call life_fnc_displayHandler"];
 
 if (MG_AirSoftCurrentLife < 1) then {
+	MG_InAirSoft = false;
+	player setVariable["inAirSoft",false,true];
 	switch(MG_AirSoftCityNPC) do
 	{
 		case 0: {
@@ -31,7 +33,6 @@ if (MG_AirSoftCurrentLife < 1) then {
 			player setPos (getMarkerPos "airsoft_sofia");
 		};
 	};
-	MG_InAirSoft = false;
 } else {
 	_selectSpawnPoint = round(random(6));
 	switch (_selectSpawnPoint) do

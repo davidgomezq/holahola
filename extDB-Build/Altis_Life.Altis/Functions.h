@@ -408,5 +408,6 @@ class Life_Client_Core
 		class airSoftImmune {}; // Telo: airSoft
 		class airSoftUniform {}; // Telo: airSoft
 		class airSoftFatigue {}; // Telo: airSoft
+		class airSoftTrigger {}; // Telo: airSoft
 	};
 };

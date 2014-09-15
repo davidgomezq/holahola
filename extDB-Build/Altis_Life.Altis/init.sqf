@@ -16,3 +16,5 @@ life_versionInfo = "Altis Life RPG v3.1.4.7";
 StartProgress = true;
 
 "BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};
+fn_deadMessages = compile preprocessFileLineNumbers "core\mafiaaltis\fn_deadMessages.sqf";
+{_x setMarkerAlphaLocal 0} forEach ["helicrash_1","helicrash_2","helicrash_3","helicrash_4"];

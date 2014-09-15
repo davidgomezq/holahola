@@ -13,7 +13,7 @@ if(isNil {uiNamespace getVariable "life_sql_id"}) then {
 	life_sql_id = round(random(9999));
 	__CONST__(life_sql_id,life_sql_id);
 	uiNamespace setVariable ["life_sql_id",life_sql_id];
-	
+
 	//Only need to setup extDB once.
 	//  If mission is reloaded, will tell clients extDB is not loaded.
 	//     Todo: Is it possible first client is loaded before this PV is sent ?
@@ -113,3 +113,6 @@ _rsb allowDamage false;
 _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
+
+/*[] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnEvent.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";*/

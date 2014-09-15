@@ -19,6 +19,7 @@ MG_AirSoftCurrentLife = MG_AirSoftLifes;
 // Telo: Seteo de variables
 MG_InAirSoft = true;
 life_cash = life_cash - 1000;
+player setVariable["inAirSoft",true,true];
 
 // Telo: Teleport
 _selectSpawnPoint = round(random(6));

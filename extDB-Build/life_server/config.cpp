@@ -139,6 +139,12 @@ class CfgFunctions
 			class msgRequest {};
 			class cleanupMessages {};
 		};
+
+		class RandomEvent
+		{
+			file = "\life_server\Functions\Mafia\RandomEvents";
+			class spawnEvent {};
+		};
 	};	
 };
 

@@ -31,6 +31,19 @@ life_deathCamera camCommit 0;
 
 (findDisplay 7345) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
 
+// Telo: Se elimina el equipo del personaje para evitar la caida descontrolada de armas.
+RemoveAllWeapons _unit;
+{_unit removeMagazine _x;} foreach (magazines _unit);
+removeUniform _unit;
+removeVest _unit;
+removeBackpack _unit;
+removeGoggles _unit;
+removeHeadGear _unit;
+{
+    _unit unassignItem _x;
+    _unit removeItem _x;
+} foreach (assignedItems _unit);
+
 //Create a thread for something?
 _unit spawn
 {
@@ -57,11 +70,12 @@ _unit spawn
 
 // Telo: Hay que enviar el dinero al matador.
 if (!isNull _killer) then {
-	[[1000,profileName],"TON_fnc_airSoftMoneyKill",_killer,false] spawn life_fnc_MP;
+	if (_killer != _unit) then {
+		[[1000,profileName],"TON_fnc_airSoftMoneyKill",_killer,false] spawn life_fnc_MP;
+	};
 };
 
-if (playerSide == civilian) then
-{
+if (playerSide == civilian) then {
     life_is_alive = false;
 };
 
