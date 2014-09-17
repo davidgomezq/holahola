@@ -410,4 +410,10 @@ class Life_Client_Core
 		class airSoftFatigue {}; // Telo: airSoft
 		class airSoftTrigger {}; // Telo: airSoft
 	};
+
+	class DynamicMap
+	{
+		file = "core\mafiaaltis\DynamicMap";
+		class dynamicMapHeliCrash {}; // Telo: DynamicMap
+	};
 };

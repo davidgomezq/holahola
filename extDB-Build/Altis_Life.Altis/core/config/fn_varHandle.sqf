@@ -66,6 +66,11 @@ switch (_mode) do
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
 			case "esposas": {"life_inv_esposas"};
+			// Telo: Mafia gaming
+			case "centralita": {"life_inv_centralita"};
+			case "trajesoldado": {"life_inv_trajesoldado"};
+			case "municionmilitar": {"life_inv_municionmilitar"};
+			case "kevlar": {"life_inv_kevlar"};
 		};
 	};
 
@@ -123,6 +128,11 @@ switch (_mode) do
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_esposas": {"esposas"};
+			// Telo: Mafia Gaming
+			case "life_inv_centralita": {"centralita"};
+			case "life_inv_trajesoldado": {"trajesoldado"};
+			case "life_inv_municionmilitar": {"municionmilitar"};
+			case "life_inv_kevlar": {"kevlar"};
 		};
 	};
 };

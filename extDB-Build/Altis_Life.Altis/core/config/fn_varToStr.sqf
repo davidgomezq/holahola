@@ -62,6 +62,11 @@ switch (_var) do
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
 	case "life_inv_esposas": {(localize "STR_Item_Esposas")};
+	// Telo: Mafia Gamin
+	case "life_inv_centralita": {(localize "STR_Item_Helicrash1")};
+	case "life_inv_trajesoldado": {(localize "STR_Item_Helicrash2")};
+	case "life_inv_municionmilitar": {(localize "STR_Item_Helicrash3")};
+	case "life_inv_kevlar": {(localize "STR_Item_Helicrash4")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

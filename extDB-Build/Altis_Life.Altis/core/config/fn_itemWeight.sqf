@@ -1,7 +1,7 @@
 /*
 	File: fn_itemWeight.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Gets the items weight and returns it.
 */
@@ -56,5 +56,10 @@ switch (_item) do
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
+	// Telo: Dynamic Map
+	case "centralita": {4};
+	case "trajesoldado": {4};
+	case "municionmilitar": {4};
+	case "kevlar": {4};
 	default {1};
 };

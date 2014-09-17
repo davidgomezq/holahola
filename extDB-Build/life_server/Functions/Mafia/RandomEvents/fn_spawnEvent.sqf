@@ -1,5 +1,5 @@
 
-/*private["_i","_aux","_helicrashSpawns","_helicrashArray","_result","_spawnCount","_spawnArray","_heliSpawn","_smokeSpawn","_fireSpawn"]; // Telo: Variables para el bucle
+private["_helicrashSpawns","_dropArmsArray","_helicrashArray","_result","_spawnCount","_spawnArray"]; // Telo: Variables para el bucle
 
 while {true} do
 {
@@ -11,63 +11,78 @@ while {true} do
 		["helicrash_3","markerHeliCrash3","textHeliCrash3"],
 		["helicrash_4","markerHeliCrash4","textHeliCrash4"]
 	];
+	// ARMA | CANTIDAD | CARGADOR | CANTIDAD
+	_dropArmsArray =
+	[
+		["srifle_LRR_SOS_F",2,"7Rnd_408_Mag",6],
+		["arifle_MXM_Hamr_pointer_F",2,"30Rnd_65x39_caseless_mag",6],
+		["srifle_EBR_ARCO_pointer_snds_F",2,"20Rnd_762x51_Mag",6],
+		["arifle_Katiba_ACO_pointer_snds_F",2,"30Rnd_65x39_caseless_green",6],
+		["arifle_Mk20_ACO_pointer_F",2,"30Rnd_556x45_Stanag",6],
+		["arifle_MXC_Holo_pointer_snds_F",2,"30Rnd_65x39_caseless_mag",6],
+		["srifle_DMR_01_SOS_F",2,"10Rnd_762x51_Mag",6]
+	];
 	_helicrashArray = [];
 	_spawnArray = [];
 
 	// Telo: Seleccion de spawns
 	_spawnCount = 2 + round(random(4));
-	for [{_i = 1}, {_i <= _spawnCount}, {_i =_i + 1}] do {
+	for "_i" from 1 to _spawnCount do {
 		_result = _helicrashSpawns call BIS_fnc_selectRandom;
 		_spawnArray pushBack _result;
 		_helicrashSpawns = _helicrashSpawns - _result;
 	};
+
 	// Telo: Spawns de helicrash seleccionados.
 	{
-		private["_marker","_text"];
+		private["_marker","_text","_heliSpawn","_smokeSpawn","_MilitaryCrate","_randomCrate","_randomPos"];
 		// Telo: Spawn del heli crash
-		_heliSpawn = "Land_Wreck_Heli_Attack_01_F" createVehicle ([_x select 0,0] call SHK_pos);
+		_heliSpawn = "Land_Wreck_Heli_Attack_01_F" createVehicle ([(_x select 0),0] call SHK_pos);
 		_Pos = position _heliSpawn;
 		_smokeSpawn = "test_EmptyObjectForSmoke" createVehicle _Pos;
-		_smokeSpawn attachTo[_heliSpawn,[0,1.5,-1]];
-		_fireSpawn = "test_EmptyObjectForFireBig" createVehicle _Pos;
-		_fireSpawn attachTo[_heliSpawn,[0,1.5,-1]];
-		//[3.5,1,-1]
+
+		// Telo: Caja militar que cae con aleatoriedad
+		_randomCrate = random(100);
+		if (_randomCrate > 80) then {
+			_randomPos = [_heliSpawn, 10, 359] call BIS_fnc_relPos;
+			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle _randomPos;
+			clearWeaponCargoGlobal _MilitaryCrate;
+			clearMagazineCargoGlobal _MilitaryCrate;
+			clearItemCargoGlobal _MilitaryCrate;
+			clearBackpackCargoGlobal _MilitaryCrate;
+			_result = _dropArmsArray call BIS_fnc_selectRandom;
+			_MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
+			_MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
+		};
+
+		//_smokeSpawn attachTo[_heliSpawn,[0,1.5,-1]];
 		// Telo: Marcador
 		_marker = _x select 1;
 		createMarker [_marker, _Pos];
 		_marker setMarkerColor "ColorOrange";
 		_marker setMarkerType "Empty";
 		_marker setMarkerShape "ELLIPSE";
-		_marker setMarkerSize [400,400];
+		_marker setMarkerSize [300,300];
 		_text = _x select 2;
 		createMarker [_text, _Pos];
-		_text setMarkerColor "ColorBlack";
+		_text setMarkerColor "ColorOrange";
 		_text setMarkerText "Accidente de helicoptero";
 		_text setMarkerType "mil_warning";
 
-		_helicrashArray pushBack [_heliSpawn,_marker,_text];
+		_helicrashArray pushBack [_heliSpawn,_smokeSpawn,_MilitaryCrate,_marker,_text];
 	} foreach _spawnArray;
 
-	[[1,"¡ATENCIÓN! Se han registrado accidentes de helicopteros en Altis. Comprueba tu mapa para saber donde estan."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	[[1,"Spawneados"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[3,"<t color='#1EFF00' size='2'>¡ATENCIÓN!</t><br/>Se han registrado nuevos accidentes de helicopteros en Altis. Comprueba tu mapa para saber donde estan."],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
-	sleep 20;
+	sleep 5400; // 1 hora y media
 	// Telo: Eliminamos los helicrash para meter nuevos.
-	diag_log format["helipointer = %1", _helicrashArray];
 	{
-		private["_heli","_smoke","_fire"];
-		_heli = _x select 0;
-		_smoke = _x select 1;
-		_fire = _x select 2;
-		if(!isNil "_heli" OR !isNull _heli) then {
-			deleteVehicle _heli;
-		};
-		deleteVehicle (_x select 1);
-		deleteVehicle (_x select 2);
+		private["_heli","_smoke","_crate"];
+		_heli = _x select 0; _smoke = _x select 1; _crate = _x select 2;
+		if(!isNil "_heli" OR !isNull _heli) then { deleteVehicle _heli; };
+		if(!isNil "_crate" OR !isNull _crate) then { detach _crate; deleteVehicle _crate; };
+		if(!isNil "_smoke" OR !isNull _smoke) then { _smoke setPos (getMarkerPos "helicrash_dropeffects");	};
 		deleteMarker (_x select 3);
-		deleteMarker (_x select 4);
+		//deleteMarker (_x select 4);
 	} foreach _helicrashArray;
-
-	[[1,"Borrados"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-	sleep 20;
-};*/
+};

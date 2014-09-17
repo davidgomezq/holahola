@@ -175,7 +175,12 @@ life_inv_items =
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
 	"life_inv_storagebig",
-	"life_inv_esposas"
+	"life_inv_esposas",
+	// Telo: Mafia Gaming
+	"life_inv_centralita",
+	"life_inv_trajesoldado",
+	"life_inv_municionmilitar",
+	"life_inv_kevlar"
 ];
 
 //Setup variable inv vars.

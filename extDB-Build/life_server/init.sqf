@@ -114,5 +114,5 @@ _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
 
-/*[] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnEvent.sqf";
-call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";*/
+[] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnEvent.sqf";
+call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";

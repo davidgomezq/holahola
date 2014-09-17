@@ -26,4 +26,6 @@ switch (_shop) do
 	case "cement": {["Cement Dealer",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
 	case "tesoros": {["Comerciante de Tesoros",["pergamino","vasija","doblon","brazalete","catalejo","abrecartas","collar","cetro"]]};
+	// Telo: Dynamic Map
+	case "retirado": {["Veterano de guerra",["centralita","trajesoldado","municionmilitar","kevlar"]]};
 };

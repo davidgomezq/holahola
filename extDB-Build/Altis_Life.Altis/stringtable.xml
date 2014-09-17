@@ -5176,4 +5176,18 @@
 			<English>Rob the Gas Station</English>
 		</Key>
 	</Package>
+	<Package name="HeliCrash">
+		<Key ID="STR_Item_Helicrash1">
+			<Original>Centralita de motor</Original>
+		</Key>
+		<Key ID="STR_Item_Helicrash2">
+			<Original>Traje de soldado</Original>
+		</Key>
+		<Key ID="STR_Item_Helicrash3">
+			<Original>Municion militar</Original>
+		</Key>
+		<Key ID="STR_Item_Helicrash4">
+			<Original>Escudos de kevlar</Original>
+		</Key>
+	</Package>
 </Project>
