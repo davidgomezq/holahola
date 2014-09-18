@@ -63,7 +63,7 @@ switch (true) do
 };
 
 _diff = [_item,1,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
+if(_diff == 0) exitWith { life_action_inUse = false; hint localize "STR_NOTF_InvFull" };
 
 for "_i" from 0 to 4 do
 {
