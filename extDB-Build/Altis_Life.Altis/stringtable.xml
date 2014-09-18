@@ -5177,17 +5177,55 @@
 		</Key>
 	</Package>
 	<Package name="HeliCrash">
-		<Key ID="STR_Item_Helicrash1">
+		<Key ID="STR_Item_Centralita">
 			<Original>Centralita de motor</Original>
 		</Key>
-		<Key ID="STR_Item_Helicrash2">
+		<Key ID="STR_Item_TrajeSoldado">
 			<Original>Traje de soldado</Original>
 		</Key>
-		<Key ID="STR_Item_Helicrash3">
+		<Key ID="STR_Item_Chatarra">
+			<Original>Chatarra de helicóptero</Original>
+		</Key>
+		<Key ID="STR_Item_PiezasMotor">
+			<Original>Piezas de motor en buen estado</Original>
+		</Key>
+		<Key ID="STR_Item_MunicionMilitar">
 			<Original>Municion militar</Original>
 		</Key>
-		<Key ID="STR_Item_Helicrash4">
+		<Key ID="STR_Item_Medallas">
+			<Original>Medallas de soldados</Original>
+		</Key>
+		<Key ID="STR_Item_Kevlar">
 			<Original>Escudos de kevlar</Original>
+		</Key>
+	</Package>
+	<Package name="Naufragios">
+		<Key ID="STR_Item_Pergamino">
+			<Original>Pergamino</Original>
+		</Key>
+		<Key ID="STR_Item_Vasija">
+			<Original>Vasija antigua</Original>
+		</Key>
+		<Key ID="STR_Item_Jarron">
+			<Original>Jarron antiguo</Original>
+		</Key>
+		<Key ID="STR_Item_Doblon">
+			<Original>Doblon</Original>
+		</Key>
+		<Key ID="STR_Item_Brazalete">
+			<Original>Brazalete</Original>
+		</Key>
+		<Key ID="STR_Item_Catalejo">
+			<Original>Catalejo</Original>
+		</Key>
+		<Key ID="STR_Item_Abrecartas">
+			<Original>Abrecartas</Original>
+		</Key>
+		<Key ID="STR_Item_Collar">
+			<Original>Collar resplandeciente</Original>
+		</Key>
+		<Key ID="STR_Item_Cetro">
+			<Original>Cetro</Original>
 		</Key>
 	</Package>
 </Project>

@@ -177,10 +177,24 @@ life_inv_items =
 	"life_inv_storagebig",
 	"life_inv_esposas",
 	// Telo: Mafia Gaming
+	// Helicrash
 	"life_inv_centralita",
 	"life_inv_trajesoldado",
+	"life_inv_chatarra",
+	"life_inv_piezasmotor",
 	"life_inv_municionmilitar",
-	"life_inv_kevlar"
+	"life_inv_medallas",
+	"life_inv_kevlar",
+	// Naufragios
+	"life_inv_pergamino",
+	"life_inv_vasija",
+	"life_inv_jarron",
+	"life_inv_doblon",
+	"life_inv_brazalete",
+	"life_inv_abrecartas",
+	"life_inv_catalejo",
+	"life_inv_collar",
+	"life_inv_cetro"
 ];
 
 //Setup variable inv vars.

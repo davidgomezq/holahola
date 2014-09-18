@@ -143,7 +143,8 @@ class CfgFunctions
 		class RandomEvent
 		{
 			file = "\life_server\Functions\Mafia\RandomEvents";
-			class spawnEvent {};
+			class spawnHeliCrash {};
+			class spawnNaufragios {};
 		};
 	};	
 };

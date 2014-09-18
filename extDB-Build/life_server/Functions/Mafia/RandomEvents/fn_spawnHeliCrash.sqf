@@ -22,6 +22,14 @@ while {true} do
 		["arifle_MXC_Holo_pointer_snds_F",2,"30Rnd_65x39_caseless_mag",6],
 		["srifle_DMR_01_SOS_F",2,"10Rnd_762x51_Mag",6]
 	];
+	// VEST | CANTIDAD | HELM | CANTIDAD
+	/*_dropArray =
+	[
+		["V_HarnessOGL_brn",2,"H_Shemag_olive_hs",2],
+		["V_TacVest_camo",2,"H_ShemagOpen_tan",2],
+		["V_Chestrig_rgr",2,"H_Shemag_khk",2],
+		["V_BandollierB_cbr",2,"H_Watchcap_khk",2]
+	];*/
 	_helicrashArray = [];
 	_spawnArray = [];
 
@@ -35,17 +43,19 @@ while {true} do
 
 	// Telo: Spawns de helicrash seleccionados.
 	{
-		private["_marker","_text","_heliSpawn","_smokeSpawn","_MilitaryCrate","_randomCrate","_randomPos"];
+		private["_marker","_text","_heliSpawn","_smokeSpawn","_MilitaryCrate","_randomCrate","_randomPos","_Pos"];
 		// Telo: Spawn del heli crash
 		_heliSpawn = "Land_Wreck_Heli_Attack_01_F" createVehicle ([(_x select 0),0] call SHK_pos);
+		_heliSpawn enableSimulation false;
+		_heliSpawn allowDamage false;
 		_Pos = position _heliSpawn;
 		_smokeSpawn = "test_EmptyObjectForSmoke" createVehicle _Pos;
 
 		// Telo: Caja militar que cae con aleatoriedad
+		_MilitaryCrate = 0;
 		_randomCrate = random(100);
 		if (_randomCrate > 80) then {
-			_randomPos = [_heliSpawn, 10, 359] call BIS_fnc_relPos;
-			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle _randomPos;
+			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle ([_heliSpawn,10] call SHK_pos);
 			clearWeaponCargoGlobal _MilitaryCrate;
 			clearMagazineCargoGlobal _MilitaryCrate;
 			clearItemCargoGlobal _MilitaryCrate;
@@ -55,7 +65,6 @@ while {true} do
 			_MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
 		};
 
-		//_smokeSpawn attachTo[_heliSpawn,[0,1.5,-1]];
 		// Telo: Marcador
 		_marker = _x select 1;
 		createMarker [_marker, _Pos];
@@ -65,7 +74,7 @@ while {true} do
 		_marker setMarkerSize [300,300];
 		_text = _x select 2;
 		createMarker [_text, _Pos];
-		_text setMarkerColor "ColorOrange";
+		_text setMarkerColor "ColorIndependent";
 		_text setMarkerText "Accidente de helicoptero";
 		_text setMarkerType "mil_warning";
 
@@ -83,6 +92,6 @@ while {true} do
 		if(!isNil "_crate" OR !isNull _crate) then { detach _crate; deleteVehicle _crate; };
 		if(!isNil "_smoke" OR !isNull _smoke) then { _smoke setPos (getMarkerPos "helicrash_dropeffects");	};
 		deleteMarker (_x select 3);
-		//deleteMarker (_x select 4);
+		deleteMarker (_x select 4);
 	} foreach _helicrashArray;
 };

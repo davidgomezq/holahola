@@ -18,19 +18,15 @@ if(isNull _curTarget) exitWith {
 		_fish = (nearestObjects[getPos player,["Fish_Base_F"],3]) select 0;
 		if(!isNil "_fish") then {
 			[_fish] call life_fnc_catchFish;
+		} else {
+			// Telo: Dynamic Map
+			[] spawn life_fnc_dynamicMapNaufragios;
 		};
 	} else {
 		if(playerSide == civilian) then {
-			// Telo: Interaccion de los objectos del mapa dinamico.
-			private["_objectsDynamicMap"];
-			_objectsDynamicMap = nearestObjects [player, ["Land_Wreck_Heli_Attack_01_F"], 10];
-			if (count _objectsDynamicMap != 0) then {
-				switch(typeOf (_objectsDynamicMap select 0)) do {
-					case "Land_Wreck_Heli_Attack_01_F": { [] spawn life_fnc_dynamicMapHeliCrash; };
-				};
-			} else {
-				[] call life_fnc_gather;
-			};
+			[] call life_fnc_gather;
+			// Telo: Dynamic Map
+			[] spawn life_fnc_dynamicMapHeliCrash;
 		};
 	};
 };

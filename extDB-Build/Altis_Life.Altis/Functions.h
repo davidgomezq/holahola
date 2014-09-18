@@ -415,5 +415,6 @@ class Life_Client_Core
 	{
 		file = "core\mafiaaltis\DynamicMap";
 		class dynamicMapHeliCrash {}; // Telo: DynamicMap
+		class dynamicMapNaufragios {}; // Telo: DynamicMap
 	};
 };

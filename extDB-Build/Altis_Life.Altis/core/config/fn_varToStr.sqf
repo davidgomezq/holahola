@@ -63,10 +63,24 @@ switch (_var) do
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
 	case "life_inv_esposas": {(localize "STR_Item_Esposas")};
 	// Telo: Mafia Gamin
-	case "life_inv_centralita": {(localize "STR_Item_Helicrash1")};
-	case "life_inv_trajesoldado": {(localize "STR_Item_Helicrash2")};
-	case "life_inv_municionmilitar": {(localize "STR_Item_Helicrash3")};
-	case "life_inv_kevlar": {(localize "STR_Item_Helicrash4")};
+	// Helicrash
+	case "life_inv_centralita": {(localize "STR_Item_Centralita")};
+	case "life_inv_trajesoldado": {(localize "STR_Item_TrajeSoldado")};
+	case "life_inv_chatarra": {(localize "STR_Item_Chatarra")};
+	case "life_inv_piezasmotor": {(localize "STR_Item_PiezasMotor")};
+	case "life_inv_municionmilitar": {(localize "STR_Item_MunicionMilitar")};
+	case "life_inv_medallas": {(localize "STR_Item_Medallas")};
+	case "life_inv_kevlar": {(localize "STR_Item_Kevlar")};
+	// Naufragio
+	case "life_inv_pergamino": {(localize "STR_Item_Pergamino")};
+	case "life_inv_vasija": {(localize "STR_Item_Vasija")};
+	case "life_inv_jarron": {(localize "STR_Item_Jarron")};
+	case "life_inv_doblon": {(localize "STR_Item_Doblon")};
+	case "life_inv_brazalete": {(localize "STR_Item_Brazalete")};
+	case "life_inv_catalejo": {(localize "STR_Item_Catalejo")};
+	case "life_inv_abrecartas": {(localize "STR_Item_Abrecartas")};
+	case "life_inv_collar": {(localize "STR_Item_Collar")};
+	case "life_inv_cetro": {(localize "STR_Item_Cetro")};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

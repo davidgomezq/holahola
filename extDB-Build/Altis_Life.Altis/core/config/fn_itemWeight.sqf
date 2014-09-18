@@ -57,9 +57,23 @@ switch (_item) do
 	case "storagesmall": {5};
 	case "storagebig": {10};
 	// Telo: Dynamic Map
+	// Helicrash
 	case "centralita": {4};
 	case "trajesoldado": {4};
+	case "chatarra": {4};
+	case "piezasmotor": {4};
 	case "municionmilitar": {4};
+	case "medallas": {4};
 	case "kevlar": {4};
+	// Naufragios
+	case "pergamino": {4};
+	case "vasija": {4};
+	case "jarron": {4};
+	case "doblon": {4};
+	case "brazalete": {4};
+	case "catalejo": {4};
+	case "abrecartas": {4};
+	case "collar": {4};
+	case "cetro": {4};
 	default {1};
 };

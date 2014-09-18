@@ -4,21 +4,59 @@
 
 	Description: Mapa dinamico para Helicrash
 */
-private["_item","_itemWeight","_rNumber","_itemName"];
+private["_item","_itemWeight","_chance","_itemName","_resourceZones","_zone"];
+_resourceZones = ["textHeliCrash1","textHeliCrash2","textHeliCrash3","textHeliCrash4"];
+_zone = "";
+
+if(life_action_inUse) exitWith {}; // Telo: Preveemos el exploit
+if(vehicle player != player) exitWith {/*hint localize "STR_NOTF_GatherVeh";*/};
+
+{
+	if(player distance (getMarkerPos _x) < 10) exitWith {_zone = _x;};
+} foreach _resourceZones;
+
+if(_zone == "") exitWith {
+	life_action_inUse = false;
+};
 
 _itemWeight = 4;
 if(life_carryWeight + _itemWeight <= life_maxWeight) then
 {
+	private["_chance_common_helicrash","_chance_uncommon_helicrash","_chance_rare_helicrash","_common_dropHelicrash","_uncommon_dropHelicrash","_rare_dropHelicrash"];
+	// Telo: Niveles de chance del loot de los helicrash
+	_chance_common_helicrash = 55; // 0 a 55 = 56%
+	_chance_uncommon_helicrash = 85; // 55 a 85 = 30%
+	_chance_rare_helicrash = 100; // 85 a 100 = 15%
+
+	// Telo: Tablas de loot de los helicrash
+	_common_dropHelicrash =
+	[
+		"", // No se encontro nada
+		"centralita",
+		"trajesoldado",
+		"chatarra"
+	];
+	_uncommon_dropHelicrash =
+	[
+		"piezasmotor",
+		"municionmilitar"
+	];
+	_rare_dropHelicrash =
+	[
+		"medallas",
+		"kevlar"
+	];
+
 	life_action_inUse = true;
-	_rNumber = floor random 100;
+	_chance = floor random 100;
 	switch (true) do
 	{
-		case (_rNumber < 15) : {_item = "";};
-		case (_rNumber < 50) : {_item = "centralita";};
-		case (_rNumber < 70) : {_item = "trajesoldado";};
-		case (_rNumber < 90) : {_item = "municionmilitar";};
-		default {_item = "kevlar";};
+		case (_chance < _chance_common_helicrash) : { _item = _common_dropHelicrash call BIS_fnc_selectRandom; };
+		case (_chance < _chance_uncommon_helicrash) : { _item = _uncommon_dropHelicrash call BIS_fnc_selectRandom; };
+		case (_chance < _chance_rare_helicrash) : { _item = _rare_dropHelicrash call BIS_fnc_selectRandom; };
+		default { _item = ""; };
 	};
+
 	titleText["Explorando el helicotero accidentado...","PLAIN"];
 	for "_i" from 0 to 2 do
 	{
@@ -32,12 +70,12 @@ if(life_carryWeight + _itemWeight <= life_maxWeight) then
 	if(([true,_item,1] call life_fnc_handleInv)) then
 	{
 		_itemName = [([_item,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-		titleText[format["Has encontrado un %1",_itemName],"PLAIN",0.7];
+		titleText[format["Has encontrado: %1",_itemName],"PLAIN",0.7];
 	};
 }
 	else
 {
-	hint localize STR_NOTF_InvFull;
+	hint localize "STR_NOTF_InvFull";
 };
 
 life_action_inUse = false;

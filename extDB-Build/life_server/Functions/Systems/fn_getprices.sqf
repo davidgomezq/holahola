@@ -48,6 +48,7 @@ _unit = owner _unit;
 		case "economy" :{ format["SELECT ressource, buyprice, sellprice FROM economy",_data];};
 		// Telo: Dynamic Map
 		case "retirado" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
+		case "tesoros" :{ format["SELECT ressource, buyprice, sellprice FROM economy WHERE shoptype='%1' ",_data];};
 		default {"Error"};
 	};
 
