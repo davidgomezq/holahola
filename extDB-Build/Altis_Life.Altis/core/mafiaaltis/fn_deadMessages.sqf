@@ -28,15 +28,17 @@ if(isServer) then
 	{
 		case (_victim == _killer):
 		{
-			[[1,format["%1 se ha suicidado.",_killer getVariable["realname",name _killer]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			if (!isNull _victim) then {
+				[[3,format["<t color='#FFB700'>%1</t> se ha suicidado.",_killer getVariable["realname",name _killer]]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			};
 		};
 		case (vehicle _killer isKindOf "Car"):
 		{
-			[[1,format["%1 ha atropellado a %2",_killer getVariable["realname",name _killer], _victim getVariable["realname",name _victim], _vehName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[3,format["<t color='#FF0000' size='2'>¡ATROPELLO!</t><br/><t color='#FFB700'>%1</t> ha atropellado a <t color='#FF6C6C'>%2</t>",_killer getVariable["realname",name _killer], _victim getVariable["realname",name _victim], _vehName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 		case (vehicle _killer isKindOf "Air"):
 		{
-			[[1,format["%1 ha matado en el aire a %2",_killer getVariable["realname",name _killer], _victim getVariable["realname",name _victim], _vehName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+			[[3,format["<t color='#FFB700'>%1</t> ha matado en el aire a <t color='#FF6C6C'>%2</t>",_killer getVariable["realname",name _killer], _victim getVariable["realname",name _victim], _vehName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
 		};
 		default
 		{

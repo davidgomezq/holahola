@@ -52,7 +52,7 @@ while {true} do
 		_smokeSpawn = "test_EmptyObjectForSmoke" createVehicle _Pos;
 
 		// Telo: Caja militar que cae con aleatoriedad
-		_MilitaryCrate = 0;
+		_MilitaryCrate = objNull;
 		_randomCrate = random(100);
 		if (_randomCrate > 80) then {
 			_MilitaryCrate = "Box_NATO_Wps_F" createVehicle ([_heliSpawn,10] call SHK_pos);
