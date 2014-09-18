@@ -20,7 +20,6 @@ removeHeadGear player;
 // Uniforme
 //player addUniform "U_I_CombatUniform";
 player addVest "V_PlateCarrier1_rgr";
-player addBackpack "B_Carryall_mcamo";
 player addHeadgear "H_Helmet_Kerry";
 
 // Primaria
