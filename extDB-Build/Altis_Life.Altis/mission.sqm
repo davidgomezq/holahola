@@ -18155,43 +18155,43 @@ class Mission
 		};
 		class Item290
 		{
-			position[]={11678.886,-0.017591149,5947.646};
+			position[]={11579.259,0.020565899,5274.521};
 			name="wreck_1";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
 			a=2000;
-			b=800;
+			b=500;
 		};
 		class Item291
 		{
-			position[]={5661.1299,0.031025127,9766.8428};
+			position[]={5370.8018,0.13467844,8467.3096};
 			name="wreck_2";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
 			a=3000;
-			b=1500;
+			b=500;
 		};
 		class Item292
 		{
-			position[]={22135.4,0.19498792,10602.356};
+			position[]={23846.375,-0.24063188,10915.189};
 			name="wreck_4";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
 			a=800;
-			b=3000;
+			b=2000;
 		};
 		class Item293
 		{
-			position[]={3509.3674,0.11994463,16060.054};
+			position[]={2613.136,0.10498332,16160.99};
 			name="wreck_3";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorGreen";
-			a=1000;
-			b=1500;
+			a=500;
+			b=1000;
 		};
 		class Item294
 		{
