@@ -33,8 +33,7 @@ switch(__GETC__(life_coplevel)) do
 	};
 
 	case 6: {
-		player addUniform "U_B_CombatUniform_mcam_worn";
-		[[player,0,"textures\uniformes\geo.jpg"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;
+		player setObjectTextureGlobal [0, "textures\uniformes\agente_montana.jpg"];
 		unitBackpack player setObjectTextureGlobal [0,""];
 	};
 
