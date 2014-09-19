@@ -75,7 +75,7 @@ switch(_shop) do
 			{
 				["Altis Patrol Officer Shop",
 					[
-						["arifle_Mk20_F",nil,75000],
+						["arifle_Mk20_F",nil,55000],
 						["SMG_02_F",nil,3000],
 						["HandGrenade_Stone","Flash",1700],
 						["MineDetector",nil,1000],
@@ -98,6 +98,39 @@ switch(_shop) do
 		};
 	};
 
+    case "cop_capitain":
+    {
+        switch(true) do
+        {
+            case (playerSide != west): {"You are not a cop!"};
+            case (__GETC__(life_coplevel) < 4): {"No eres capitan!"};
+            default
+            {
+                ["Tienda Capitan",
+                    [
+                    	["arifle_MXM_F",nil,95000],
+						["SMG_02_F",nil,3000],
+						["arifle_Mk20_plain_F",nil,55000],
+						["optic_MRCO",nil,2500],
+						["acc_pointer_IR",nil,2500],
+						["optic_Holosight",nil,1200],
+						["optic_ACO_grn",nil,2500],
+						["optic_ACO_grn_smg",nil,600],
+                        ["optic_DMS",nil,40000],
+						["muzzle_snds_M",nil,3000],
+						["muzzle_snds_B",nil,10000],
+						["30Rnd_556x45_Stanag",nil,100],
+						["30Rnd_9x21_Mag",nil,60],
+						["30Rnd_65x39_caseless_mag",nil,300],
+						["HandGrenade_Stone","Flashbang",1700],
+						["Rangefinder",nil,4000],
+						["Binocular",nil,150],
+						["ItemGPS",nil,100],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150],
+						["Medikit",nil,1000],
+						["NVGoggles",nil,2000]
+                      
 	case "cop_sergeant":
 	{
 		switch(true) do
@@ -109,8 +142,9 @@ switch(_shop) do
 				["Altis Sergeant Officer Shop",
 					[
 					    ["srifle_EBR_F",nil,155000],
+					    ["arifle_MXM_F",nil,95000],
 						["SMG_02_F",nil,3000],
-						["arifle_Mk20_plain_F",nil,30000],
+						["arifle_Mk20_plain_F",nil,55000],
 						["optic_MRCO",nil,2500],
 						["acc_pointer_IR",nil,2500],
 						["optic_Holosight",nil,1200],
@@ -122,6 +156,7 @@ switch(_shop) do
 						["30Rnd_556x45_Stanag",nil,100],
 						["30Rnd_9x21_Mag",nil,60],
 						["20Rnd_762x51_Mag",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,300],
 						["HandGrenade_Stone","Flashbang",1700],
 						["Rangefinder",nil,4000],
 						["Binocular",nil,150],
