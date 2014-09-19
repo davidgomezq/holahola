@@ -130,6 +130,11 @@ switch(_shop) do
 						["FirstAidKit",nil,150],
 						["Medikit",nil,1000],
 						["NVGoggles",nil,2000]
+					]
+				];
+			};
+		};
+	};
                       
 	case "cop_sergeant":
 	{
