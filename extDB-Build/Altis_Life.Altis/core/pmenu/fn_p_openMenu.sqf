@@ -8,6 +8,8 @@
 */
 if(!alive player || dialog) exitWith {}; //Prevent them from opening this for exploits while dead.
 createDialog "playerSettings";
+// Telo: Toggle Menu
+MG_yMenu = "Y";
 disableSerialization;
 
 switch(playerSide) do

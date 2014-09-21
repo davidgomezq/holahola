@@ -466,3 +466,6 @@ life_deposit_prices =
 	["B_MRAP_01_F",50000]
 ];
 __CONST__(life_deposit_prices,life_deposit_prices);
+
+// Telo: Menu Toggle
+MG_yMenu = "";

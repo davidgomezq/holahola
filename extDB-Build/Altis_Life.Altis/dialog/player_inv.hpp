@@ -210,7 +210,7 @@ class playerSettings {
 			idc = -1;
 			//shortcuts[] = {0x00050000 + 2};
 			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
+			onButtonClick = "MG_yMenu = ""Y""; closeDialog 0;";
 			x = 0.1;
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -220,7 +220,7 @@ class playerSettings {
 		class ButtonSettings : life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Settings";
-			onButtonClick = "[] call life_fnc_settingsMenu;";
+			onButtonClick = "MG_yMenu = ""SUB""; [] call life_fnc_settingsMenu;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -230,7 +230,7 @@ class playerSettings {
 		class ButtonMyGang : Life_RscButtonMenu {
 			idc = 2011;
 			text = "$STR_PM_MyGang";
-			onButtonClick = "if(isNil ""life_action_gangInUse"") then {if(isNil {(group player) getVariable ""gang_owner""}) then {createDialog ""Life_Create_Gang_Diag"";} else {[] spawn life_fnc_gangMenu;};};";
+			onButtonClick = "if(isNil ""life_action_gangInUse"") then {if(isNil {(group player) getVariable ""gang_owner""}) then {createDialog ""Life_Create_Gang_Diag"";} else {MG_yMenu = ""SUB""; [] spawn life_fnc_gangMenu;};};";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -262,7 +262,7 @@ class playerSettings {
 		class ButtonGangList : Life_RscButtonMenu {
 			idc = 2012;
 			text = "$STR_PM_WantedList";
-			onButtonClick = "[] call life_fnc_wantedMenu";
+			onButtonClick = "MG_yMenu = ""SUB""; [] call life_fnc_wantedMenu";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -272,7 +272,7 @@ class playerSettings {
 		class ButtonKeys : Life_RscButtonMenu {
 			idc = 2013;
 			text = "$STR_PM_KeyChain";
-			onButtonClick = "createDialog ""Life_key_management"";";
+			onButtonClick = "MG_yMenu = ""SUB""; createDialog ""Life_key_management"";";
 			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -282,7 +282,7 @@ class playerSettings {
 		class ButtonCell : Life_RscButtonMenu {
 			idc = 2014;
 			text = "$STR_PM_CellPhone";
-			onButtonClick = "createDialog ""Life_my_smartphone"";";
+			onButtonClick = "MG_yMenu = ""SUB""; createDialog ""Life_my_smartphone"";";
 			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
@@ -292,7 +292,7 @@ class playerSettings {
 		class ButtonAdminMenu : Life_RscButtonMenu {
 			idc = 2021;
 			text = "$STR_PM_AdminMenu";
-			onButtonClick = "createDialog ""life_admin_menu"";";
+			onButtonClick = "MG_yMenu = ""SUB""; createDialog ""life_admin_menu"";";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;
 			w = (6.25 / 40);
@@ -313,7 +313,7 @@ class playerSettings {
 		class ButtonMarket : Life_RscButtonMenu {
 			idc = -1;
 			text = "Market";
-			onButtonClick = "[] call life_fnc_OpenEconomy;";
+			onButtonClick = "MG_yMenu = ""SUB""; [] call life_fnc_OpenEconomy;";
 			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;

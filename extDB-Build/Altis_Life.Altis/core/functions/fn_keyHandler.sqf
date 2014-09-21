@@ -182,9 +182,18 @@ switch (_code) do
 	//Y Player Menu
 	case 21:
 	{
-		if(!_alt && !_ctrlKey && !dialog) then
-		{
-			[] call life_fnc_p_openMenu;
+		if(!_alt && !_ctrlKey) then {
+			if(!dialog) then {
+				[] call life_fnc_p_openMenu;
+			} else {
+				// Telo: Toggle Menu
+				if (MG_yMenu != "") then {
+					switch (MG_yMenu) do {
+						case "Y": { MG_yMenu = ""; closeDialog 0; };
+						case "SUB": { MG_yMenu = "Y"; closeDialog 0; };
+					};
+				};
+			};
 		};
 	};
 
