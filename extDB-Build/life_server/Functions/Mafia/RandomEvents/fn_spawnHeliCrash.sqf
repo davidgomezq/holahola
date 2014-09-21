@@ -14,13 +14,13 @@ while {true} do
 	// ARMA | CANTIDAD | CARGADOR | CANTIDAD
 	_dropArmsArray =
 	[
-		["srifle_LRR_SOS_F",2,"7Rnd_408_Mag",6],
-		["arifle_MXM_Hamr_pointer_F",2,"30Rnd_65x39_caseless_mag",6],
-		["srifle_EBR_ARCO_pointer_snds_F",2,"20Rnd_762x51_Mag",6],
-		["arifle_Katiba_ACO_pointer_snds_F",2,"30Rnd_65x39_caseless_green",6],
-		["arifle_Mk20_ACO_pointer_F",2,"30Rnd_556x45_Stanag",6],
-		["arifle_MXC_Holo_pointer_snds_F",2,"30Rnd_65x39_caseless_mag",6],
-		["srifle_DMR_01_SOS_F",2,"10Rnd_762x51_Mag",6]
+		["launch_RPG32_F",1,"",0],
+		["",0,"RPG32_HE_F",2],
+		["arifle_Katiba_GL_F",2,"",0],
+		["",0,"1Rnd_SmokeOrange_Grenade_shell",3],
+		["",0,"1Rnd_SmokeOrange_Grenade_shell",1],
+		["arifle_TRG21_GL_F",2,"",0],
+		["arifle_TRG21_MRCO_F",2,"30Rnd_556x45_Stanag_Tracer_Red",6]
 	];
 	// VEST | CANTIDAD | HELM | CANTIDAD
 	/*_dropArray =
@@ -61,12 +61,12 @@ while {true} do
 			clearItemCargoGlobal _MilitaryCrate;
 			clearBackpackCargoGlobal _MilitaryCrate;
 			_result = _dropArmsArray call BIS_fnc_selectRandom;
-			if ((_result select 0) != "" OR (_result select 1) != 0) then {
-				_MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
-			};
-			if ((_result select 2) != "" OR (_result select 3) != 0) then {
-				_MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
-			};
+            if ((_result select 0) != "" OR (_result select 1) != 0) then {
+                _MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
+            };
+            if ((_result select 2) != "" OR (_result select 3) != 0) then {
+                _MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
+            };
 		};
 
 		// Telo: Marcador
