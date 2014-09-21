@@ -61,8 +61,12 @@ while {true} do
 			clearItemCargoGlobal _MilitaryCrate;
 			clearBackpackCargoGlobal _MilitaryCrate;
 			_result = _dropArmsArray call BIS_fnc_selectRandom;
-			_MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
-			_MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
+			if ((_result select 0) != "" OR (_result select 1) != 0) then {
+				_MilitaryCrate addWeaponCargoGlobal [(_result select 0), (_result select 1)];
+			};
+			if ((_result select 2) != "" OR (_result select 3) != 0) then {
+				_MilitaryCrate addMagazineCargoGlobal [(_result select 2), (_result select 3)];
+			};
 		};
 
 		// Telo: Marcador

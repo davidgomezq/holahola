@@ -1,5 +1,5 @@
 /*
-	File: fn_getVehicles.sqf
+	File: fn_getImpoundVehicles.sqf
 	Author: Bryan "Tonic" Boardwine
 
 	Description:
@@ -10,6 +10,8 @@ _pid = [_this,0,"",[""]] call BIS_fnc_param;
 _side = [_this,1,sideUnknown,[west]] call BIS_fnc_param;
 _type = [_this,2,"",[""]] call BIS_fnc_param;
 _unit = [_this,3,ObjNull,[ObjNull]] call BIS_fnc_param;
+
+["CALL impoundVehicles",1] spawn DB_fnc_asyncCall;
 
 //Error checks
 if(_pid == "" OR _side == sideUnknown OR _type == "" OR isNull _unit) exitWith
@@ -33,9 +35,7 @@ if(_side == "Error") exitWith {
 	[[[]],"life_fnc_impoundMenu",(owner _unit),false] spawn life_fnc_MP;
 };
 
-["CALL impoundVehicles",1] spawn DB_fnc_asyncCall;
-
-_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE pid='%1' AND alive='1' AND active='0' AND impound='0' AND side='%2' AND type='%3'",_pid,_side,_type];
+_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE pid='%1' AND impound='1' AND side='%2' AND type='%3'",_pid,_side,_type];
 
 waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;

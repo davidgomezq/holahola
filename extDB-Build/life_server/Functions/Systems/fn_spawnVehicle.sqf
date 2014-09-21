@@ -1,7 +1,7 @@
 /*
 	File: fn_spawnVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sends the query request to the database, if an array is returned then it creates
 	the vehicle if it's not in use or dead.
@@ -63,9 +63,14 @@ if(count _nearVehicles > 0) exitWith
 };
 
 _query = format["UPDATE vehicles SET active='1' WHERE pid='%1' AND id='%2'",_pid,_vid];
-
 waitUntil {!DB_Async_Active};
 [_query,false] spawn DB_fnc_asyncCall;
+
+// Telo: Desembargo del vehiculo en la base de datos.
+_query = format["UPDATE vehicles SET impound='0', impound_time = CURRENT_TIMESTAMP WHERE pid='%1' AND id='%2'", _pid, _vid];
+waitUntil {!DB_Async_Active};
+[_query,false] spawn DB_fnc_asyncCall;
+
 if(typeName _sp == "STRING") then {
 	_vehicle = createVehicle[(_vInfo select 2),[0,0,999],[],0,"NONE"];
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
@@ -86,7 +91,7 @@ _vehicle allowDamage true;
 [[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
 _vehicle lock 2;
-//Reskin the vehicle 
+//Reskin the vehicle
 [[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];

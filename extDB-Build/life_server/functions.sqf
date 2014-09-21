@@ -201,7 +201,7 @@ compileFinal "
 
 	[[_msg,name player,3],""TON_fnc_clientMessage"",_to,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
-	hint format[""Admin Message Sent To: %1 - Message: %2"",name _to,_msg];
+	hint format[""Mensaje de un Administrador a: %1 - Mensaje: %2"",name _to,_msg];
 ";
 
 TON_fnc_cell_adminmsgall =
@@ -214,7 +214,7 @@ compileFinal "
 
 	[[_msg,name player,4],""TON_fnc_clientMessage"",true,false] spawn life_fnc_MP;
 	[] call life_fnc_cellphone;
-	hint format[""Admin Message Sent To All: %1"",_msg];
+	hint format[""Mensaje de un Administrador: %1"",_msg];
 ";
 
 publicVariable "TON_fnc_cell_textmsg";
@@ -276,11 +276,11 @@ compileFinal "
 		case 3 :
 		{
 			private[""_message""];
-			_message = format[""!!!ADMIN MESSAGE: %1"",_msg];
+			_message = format[""MENSAJE DE UN ADMINISTRADOR %1"",_msg];
 			_admin = format[""Sent by admin: %1"", _from];
-			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>You<br/><t color='#33CC33'>From: <t color='#ffffff'>An Admin<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%1"",_msg];
+			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Mensaje de un Administrador<br/><br/><t color='#33CC33'><t align='left'><t size='1'>Para: <t color='#ffffff'>Tu<br/><t color='#33CC33'>De: <t color='#ffffff'>An Admin<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
 
-			[""AdminMessage"",[""You Have Received A Message From An Admin!""]] call bis_fnc_showNotification;
+			[""AdminMessage"",[""¡Has recibido un mensaje de un Administrador!""]] call bis_fnc_showNotification;
 			systemChat _message;
 			if((call life_adminlevel) > 0) then {systemChat _admin;};
 		};
@@ -288,11 +288,11 @@ compileFinal "
 		case 4 :
 		{
 			private[""_message"",""_admin""];
-			_message = format[""!!!ADMIN MESSAGE: %1"",_msg];
-			_admin = format[""Sent by admin: %1"", _from];
-			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Admin Message<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>All Players<br/><t color='#33CC33'>From: <t color='#ffffff'>The Admins<br/><br/><t color='#33CC33'>Message:<br/><t color='#ffffff'>%1"",_msg];
+			_message = format[""MENSAJE DE UN ADMINISTRADOR: %1"",_msg];
+			_admin = format[""Enviado por: %1"", _from];
+			hint parseText format [""<t color='#FF0000'><t size='2'><t align='center'>Mensaje de un Administrador<br/><br/><t color='#33CC33'><t align='left'><t size='1'>To: <t color='#ffffff'>Todos los jugadores<br/><t color='#33CC33'>De: <t color='#ffffff'>Los Administradores<br/><br/><t color='#33CC33'>Mensaje:<br/><t color='#ffffff'>%1"",_msg];
 
-			[""AdminMessage"",[""You Have Received A Message From An Admin!""]] call bis_fnc_showNotification;
+			[""AdminMessage"",[""¡Has recibido un mensaje de un Administrador!""]] call bis_fnc_showNotification;
 			systemChat _message;
 			if((call life_adminlevel) > 0) then {systemChat _admin;};
 		};

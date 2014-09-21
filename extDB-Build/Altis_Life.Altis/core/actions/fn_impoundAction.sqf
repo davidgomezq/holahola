@@ -9,6 +9,14 @@ private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progre
 _vehicle = cursorTarget;
 if(!((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship"))) exitWith {};
 if(player distance cursorTarget > 10) exitWith {};
+
+// Telo: Tiempo de embargo
+_time = ctrlText 1801;
+if(!([_time] call fnc_isnumber)) exitWith {	hint "Introduce un numero por favor."; };
+_time = parseNumber _time; //requested number
+_time = round _time;
+if(_time < 15 || _time > 240) exitWith { hint "El rango de tiempo para embargos de coche es entre 15 minutos y 240 minutos (4 horas)."; };
+
 if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Ship")) then
 {
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
@@ -56,6 +64,8 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 			case (_vehicle isKindOf "Air"): {_price = (call life_impound_air);};
 		};
 
+		// Telo: Guardar en la DB el tiempo de embargo
+		[[_vehicle,_time],"TON_fnc_impoundVehicles",false,false] spawn life_fnc_MP;
 		life_impound_inuse = true;
 		[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
 		waitUntil {!life_impound_inuse};

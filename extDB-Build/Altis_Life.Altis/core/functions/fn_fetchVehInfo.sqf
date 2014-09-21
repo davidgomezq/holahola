@@ -1,10 +1,10 @@
 /*
 	File: fn_fetchVehInfo.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Used in returning information about a vehicle from Config >> "CfgVehicles"
-	
+
 	Return:
 	0: classname
 	1: scope

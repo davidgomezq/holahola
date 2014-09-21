@@ -140,6 +140,13 @@ class CfgFunctions
 			class cleanupMessages {};
 		};
 
+		class MafiaGaming
+		{
+			file = "\life_server\Functions\Mafia";
+			class impoundVehicles {}; // Telo: Embargar coches
+			class getImpoundVehicles {}; // Telo: Carga de vehiculos embargados
+		};
+
 		class RandomEvent
 		{
 			file = "\life_server\Functions\Mafia\RandomEvents";
