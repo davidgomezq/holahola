@@ -93,9 +93,23 @@ life_fnc_moveIn = compileFinal
 	player moveInCargo (_this select 0);
 ";
 
-[] execVM "core\init_survival.sqf";
+life_fnc_garageRefund = compileFinal
+"
+	_price = _this select 0;
+	_unit = _this select 1;
+	if(_unit != player) exitWith {};
+	life_atmcash = life_atmcash + _price;
+";
 
-__CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
+life_fnc_garageRefund = compileFinal
+"
+	_price = _this select 0;
+	_unit = _this select 1;
+	if(_unit != player) exitWith {};
+	life_atmcash = life_atmcash + _price;
+";
+
+[] execVM "core\init_survival.sqf";
 
 switch(__GETC__(life_donator)) do
 {
@@ -106,3 +120,4 @@ switch(__GETC__(life_donator)) do
 	case 4: {life_donDis = 0.80};
 	case 5: {life_donDis = 0.75};
 };
+__CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
