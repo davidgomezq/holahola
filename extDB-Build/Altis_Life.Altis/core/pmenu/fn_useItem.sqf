@@ -1,7 +1,7 @@
 /*
 	File: fn_useItem.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main function for item effects and functionality through the player menu.
 */
@@ -20,26 +20,26 @@ switch (true) do
 			player setFatigue 0;
 		};
 	};
-	
+
 	case (_item == "boltcutter"): {
 		[cursorTarget] spawn life_fnc_boltcutter;
 		closeDialog 0;
 	};
-	
+
 	case (_item == "blastingcharge"): {
 		player reveal fed_bank;
 		(group player) reveal fed_bank;
 		[cursorTarget] spawn life_fnc_blastingCharge;
 	};
-	
+
 	case (_item == "defusekit"): {
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};
-	
+
 	case (_item in ["storagesmall","storagebig"]): {
 		[_item] call life_fnc_storageBox;
 	};
-	
+
 	case (_item == "redgull"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -56,7 +56,7 @@ switch (true) do
 			};
 		};
 	};
-	
+
 	case (_item == "spikeStrip"):
 	{
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
@@ -65,18 +65,18 @@ switch (true) do
 			[] spawn life_fnc_spikeStrip;
 		};
 	};
-	
+
 	case (_item == "fuelF"):
 	{
 		if(vehicle player != player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
 		[] spawn life_fnc_jerryRefuel;
 	};
-	
+
 	case (_item == "lockpick"):
 	{
 		[] spawn life_fnc_lockpick;
 	};
-	
+
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]):
 	{
 		[_item] call life_fnc_eatFood;
@@ -86,12 +86,54 @@ switch (true) do
 	{
 		[] spawn life_fnc_pickAxeUse;
 	};
-	
+	// Telo: Efectos de drogas
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 20;
+			[] spawn
+			{
+				life_redgull_effect = time;
+				switch(round(random(4))) do {
+					case 0: { titleText["¡Que buena está, esta mierda colega!","PLAIN"]; };
+					case 1: { titleText["¡La cocaina es vida!","PLAIN"]; };
+					case 2: { titleText["¡Esto es un paraiso colega!","PLAIN"]; };
+					case 3: { titleText["¡Hola! ¡Hola! ¡EEEEEEEEEEHHHH!","PLAIN"]; };
+					case 4: { titleText["¡Yo no consumo nada! YO ME METO TODAAAA...","PLAIN"]; };
+				};
+				player enableFatigue false;
+				["cocainep"] spawn life_fnc_drugsEffects;
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (10 * 60))};
+				player enableFatigue true;
+			};
+		};
+	};
+	case (_item == "marijuana"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			life_thirst = 50;
+			life_hunger = 20;
+			[] spawn
+			{
+				switch(round(random(5))) do {
+					case 0: { titleText["¡Que buena está, esta mierda colega!","PLAIN"]; };
+					case 1: { titleText["¡La marihuana es vida!","PLAIN"]; };
+					case 2: { titleText["¡Noto como me abre los pulmones!","PLAIN"]; };
+					case 3: { titleText["¡Esto es un paraiso colega!","PLAIN"]; };
+					case 4: { titleText["¡Hola! ¡Hola! ¡EEEEEEEEEEHHHH!","PLAIN"]; };
+					case 5: { titleText["¡Yo no consumo nada! YO ME METO TODAAAA...","PLAIN"]; };
+				};
+				["marijuana"] spawn life_fnc_drugsEffects;
+			};
+		};
+	};
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";
 	};
 };
-	
+
 [] call life_fnc_p_updateMenu;
 [] call life_fnc_hudUpdate;

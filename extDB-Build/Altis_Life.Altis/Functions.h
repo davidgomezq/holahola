@@ -409,6 +409,7 @@ class Life_Client_Core
 		class airSoftUniform {}; // Telo: airSoft
 		class airSoftFatigue {}; // Telo: airSoft
 		class airSoftTrigger {}; // Telo: airSoft
+		class drugsEffects {}; // Telo: Efectos de drogas
 	};
 
 	class DynamicMap
