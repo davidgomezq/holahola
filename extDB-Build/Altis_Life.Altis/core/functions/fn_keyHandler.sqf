@@ -52,12 +52,6 @@ switch (_code) do
 		if (MG_inDeposit) then { MG_inDeposit = true; };
 		[] call SOCK_fnc_updateRequest;
 	};
-	case 18:
-	{
-		if(_shift) then {
-			createDialog "impound_time";
-		};
-	};
 	//Space key for Jumping
 	case 57:
 	{
