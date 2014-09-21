@@ -24,7 +24,8 @@ if(isNull _curTarget) exitWith {
 		};
 	} else {
 		if(playerSide == civilian) then {
-			[] call life_fnc_gather;
+			_handle = [] spawn life_fnc_gather;
+			waitUntil {scriptDone _handle};
 			// Telo: Dynamic Map
 			[] spawn life_fnc_dynamicMapHeliCrash;
 		};
