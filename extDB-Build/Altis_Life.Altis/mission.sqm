@@ -199,7 +199,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=135;
+		items=138;
 		class Item0
 		{
 			side="WEST";
@@ -4636,40 +4636,66 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=4;
+				items=1;
 				class Item0
 				{
-					position[]={5501.5098,27.299999,14995};
+					position[]={5501.5239,27.299999,14994.923};
 					id=267;
 					side="LOGIC";
 					vehicle="ModuleChemlightBlue_F";
 					leader=1;
 					skill=1;
 				};
-				class Item1
+			};
+		};
+		class Item135
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
 				{
-					position[]={5497.54,27.299999,14990.1};
+					position[]={5497.8765,27.299999,14990.327};
 					id=268;
 					side="LOGIC";
 					vehicle="ModuleChemlightBlue_F";
+					leader=1;
 					skill=1;
 				};
-				class Item2
+			};
+		};
+		class Item136
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
 				{
-					position[]={5489.54,27.299999,15000};
-					offsetY=6.7452502;
+					position[]={5470.0347,27.299999,15014.408};
 					id=269;
 					side="LOGIC";
-					vehicle="ModuleChemlightYellow_F";
+					vehicle="ModuleChemlightBlue_F";
+					leader=1;
 					skill=1;
 				};
-				class Item3
+			};
+		};
+		class Item137
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
 				{
-					position[]={5470.4502,27.299999,15014.2};
-					offsetY=21.384501;
+					position[]={5489.7305,27.299999,14999.813};
+					offsetY=6.7452502;
 					id=270;
 					side="LOGIC";
-					vehicle="ModuleChemlightBlue_F";
+					vehicle="ModuleChemlightYellow_F";
+					leader=1;
 					skill=1;
 				};
 			};
@@ -16030,7 +16056,6 @@ class Mission
 			vehicle="Land_Atm_02_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
-
 		};
 		class Item1096
 		{
