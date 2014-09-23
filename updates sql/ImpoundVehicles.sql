@@ -1,21 +1,6 @@
-CREATE TABLE IF NOT EXISTS `vehicles` (
-  `id` int(12) NOT NULL AUTO_INCREMENT,
-  `side` varchar(15) NOT NULL,
-  `classname` varchar(32) NOT NULL,
-  `type` varchar(12) NOT NULL,
-  `pid` varchar(32) NOT NULL,
-  `alive` tinyint(1) NOT NULL DEFAULT '1',
-  `active` tinyint(1) NOT NULL DEFAULT '0',
-  `plate` int(20) NOT NULL,
-  `color` int(20) NOT NULL,
-  `inventory` varchar(500) NOT NULL,
-  `impound` tinyint(1) NOT NULL DEFAULT '0',
-  `impound_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `side` (`side`),
-  KEY `pid` (`pid`),
-  KEY `type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=1816 DEFAULT CHARSET=latin1;
+ALTER TABLE `vehicles`
+  ADD COLUMN `impound` TINYINT(1) NOT NULL DEFAULT '0' AFTER `inventory`,
+  ADD COLUMN `impound_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `impound`;
 
 DELIMITER //
 DROP PROCEDURE IF EXISTS `impoundVehicles`;

@@ -49,7 +49,7 @@ switch (_code) do
 
 	case 1:
 	{
-		if (MG_inDeposit) then { MG_inDeposit = true; };
+		if (MG_inDeposit) then { MG_inDeposit = false; };
 		[] call SOCK_fnc_updateRequest;
 	};
 	//Space key for Jumping

@@ -469,3 +469,8 @@ __CONST__(life_deposit_prices,life_deposit_prices);
 
 // Telo: Menu Toggle
 MG_yMenu = "";
+
+// Telo: Casino.
+MG_casino_progress = false;
+MG_casino_price = 5000;
+MG_casino_counts = 2;

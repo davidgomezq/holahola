@@ -410,6 +410,8 @@ class Life_Client_Core
 		class airSoftFatigue {}; // Telo: airSoft
 		class airSoftTrigger {}; // Telo: airSoft
 		class drugsEffects {}; // Telo: Efectos de drogas
+		class casino {}; // Telo: Maquina Tragaperras
+		class casinoShop {}; // Telo: Casino Shop
 	};
 
 	class DynamicMap

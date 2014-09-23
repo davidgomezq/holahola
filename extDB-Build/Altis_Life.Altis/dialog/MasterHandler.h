@@ -30,3 +30,5 @@
 // Mafia Gaming
 #include "airSoftdeathScreen.h"
 #include "impound_time.hpp"
+#include "casino.hpp"
+#include "casino_winner.hpp"

@@ -130,11 +130,17 @@ for "_i" from 1 to 3 do {_dome setVariable[format["bis_disabled_Door_%1",_i],1,t
 _rsb setVariable["bis_disabled_Door_1",1,true];
 _rsb allowDamage false;
 _dome allowDamage false;
-life_server_isReady = true;
-publicVariable "life_server_isReady";
 
 // Telo: Dynamic Map
 [] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnHeliCrash.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
 [] execVM "\life_server\Functions\Mafia\RandomEvents\fn_spawnNaufragios.sqf";
 call compile preProcessFileLineNumbers "\life_server\SHK_pos\shk_pos_init.sqf";
+
+// Telo: Casino.
+life_jackpoint_casino = 20000 + round(random(20000));
+publicVariable "life_jackpoint_casino";
+
+life_server_isReady = true;
+publicVariable "life_server_isReady";
+
