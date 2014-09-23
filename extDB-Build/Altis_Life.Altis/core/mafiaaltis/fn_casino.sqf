@@ -21,12 +21,13 @@ if (MG_casino_counts <= 0) exitWith {
 	MG_casino_counts = 2;
 };
 
+if (life_cash < 5000 && MG_casino_counts == 2) exitWith {
+	disableUserInput false;
+	MG_casino_progress = false;
+	hint "No tienes dinero en efectivo.";
+};
+
 if (MG_casino_counts == 2) then {
-	if (life_cash < 5000) exitWith {
-		disableUserInput false;
-		MG_casino_progress = false;
-		hint "No tienes dinero en efectivo.";
-	};
 	life_cash = life_cash - MG_casino_price;
 };
 
