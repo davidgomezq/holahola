@@ -16,14 +16,17 @@ _frutasArray =
 disableSerialization;
 disableUserInput true;
 MG_casino_progress = true;
+
+if (MG_casino_counts <= 0) exitWith {
+	MG_casino_counts = 2;
+};
+
 if (MG_casino_counts == 2) then {
-	if(life_cash < 5000) exitWith
-	{
+	if (life_cash < 5000) exitWith {
 		disableUserInput false;
 		MG_casino_progress = false;
 		hint "No tienes dinero en efectivo.";
 	};
-
 	life_cash = life_cash - MG_casino_price;
 };
 
@@ -67,7 +70,6 @@ _thirdElement ctrlSetText _text3;
 if (_text1 == _text2 && _text1 == _text3) exitWith {
 	// Telo: Entregamos el premio
 	life_cash = life_cash + life_jackpoint_casino;
-	if (MG_casino_counts <= 0) then { MG_casino_counts = 2; };
 
 	[[3,format["<t color='#6400CA' size='1.3'>¡TENEMOS GANADOR!</t><br/><t color='#FFB700'>%1</t> ha ganado el bote acumulado de <t color='#00CE13'>$%2</t> en el <t color='#88FC00'>Mafia Casino</t>. Tendra que ir al banco rapido o alguien puede atracarle.", player getVariable["realname",name player], life_jackpoint_casino]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
@@ -98,7 +100,6 @@ if (_text1 == _text2 && _text1 == _text3) exitWith {
 // Telo: Si hay dos iguales devolvemos el 50% de lo jugado.
 if (_text1 == _text2 OR _text1 == _text3 OR _text2 == _text3) exitWith {
 	life_cash = life_cash + (MG_casino_price / 2);
-	if (MG_casino_counts <= 0) then { MG_casino_counts = 2; };
 
 	_jackPoint = _ui displayCtrl 1907;
 	_jackPoint ctrlSetStructuredText parseText format["PRECIO POR PARTIDA: <t color='#499125'>$%1</t><br/>BOTE ACUMULADO: <t color='#499125'>$%2</t><br/>Te quedan <t color='#FFB700'>%3</tb> intentos.", MG_casino_price, life_jackpoint_casino, MG_casino_counts];
