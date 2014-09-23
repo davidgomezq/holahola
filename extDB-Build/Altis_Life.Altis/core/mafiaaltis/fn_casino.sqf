@@ -17,6 +17,13 @@ disableSerialization;
 disableUserInput true;
 MG_casino_progress = true;
 if (MG_casino_counts == 2) then {
+	if(life_cash < 5000) exitWith
+	{
+		disableUserInput false;
+		MG_casino_progress = false;
+		hint "No tienes dinero en efectivo.";
+	};
+
 	life_cash = life_cash - MG_casino_price;
 };
 
